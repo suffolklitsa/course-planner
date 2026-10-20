@@ -377,7 +377,7 @@ test("usage counts send event names only, never search text, plan contents or th
     expect(url.origin + url.pathname).toBe("https://analytics.suffolklitsa.org/collect");
     expect([...url.searchParams.keys()]).toEqual(["sid", "h", "p", "r"]);
     expect(url.searchParams.get("sid")).toBe("litsa");
-    expect(url.searchParams.get("h")).toBe("https://suffolklitsa.org");
+    expect(url.searchParams.get("h")).toBe(new URL(page.url()).origin);
     expect(url.searchParams.get("r")).toBe("/planner/");
     expect(url.searchParams.get("p")).toMatch(/^\/planner\/ev\/[a-z-]+(\/[a-z0-9-]+)?$/);
     for (const text of [u, decoded]) {

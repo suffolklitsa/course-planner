@@ -62,6 +62,7 @@ test("no path ever carries a hash, a query or free text", () => {
   const u = collectUrl(eventPath("add", "2155"));
   assert.equal(u, "https://analytics.suffolklitsa.org/collect?sid=litsa&h=https%3A%2F%2Fsuffolklitsa.org&p=%2Fplanner%2Fev%2Fadd%2F2155&r=%2Fplanner%2F");
   assert.doesNotMatch(u, /#/);
+  assert.match(collectUrl("/planner/ev/print", "https://staging.suffolklitsa.pages.dev"), /&h=https%3A%2F%2Fstaging\.suffolklitsa\.pages\.dev&/);
 });
 
 test("sort names match the planner's sorts, and every filter name is a control on the page", () => {

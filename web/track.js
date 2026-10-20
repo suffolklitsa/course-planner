@@ -68,10 +68,11 @@ export function trackingAllowed({ webdriver = false, force = false, notrack = nu
   return host === "suffolklitsa.org" || host === "www.suffolklitsa.org" || host.endsWith(".pages.dev");
 }
 
-// The same request analytics.js makes in hit(): site id, the site's host, the path, and the referrer field.
-export function collectUrl(path) {
+// The same request analytics.js makes in hit(): site id, the page's host, the path, and the referrer field.
+// The host is the real one so staging and preview hits stay out of the live numbers.
+export function collectUrl(path, origin = "https://suffolklitsa.org") {
   return "https://analytics.suffolklitsa.org/collect?sid=litsa" +
-    "&h=" + encodeURIComponent("https://suffolklitsa.org") +
+    "&h=" + encodeURIComponent(origin) +
     "&p=" + encodeURIComponent(path) + "&r=" + encodeURIComponent("/planner/");
 }
 
@@ -90,7 +91,7 @@ export function makeTracker({ env, send, now = () => Date.now() }) {
       const t = now();
       if (lastSent.has(path) && t - lastSent.get(path) < REPEAT_MS) return false;
       lastSent.set(path, t);
-      send(collectUrl(path));
+      send(collectUrl(path, env().origin));
       return true;
     } catch {
       return false;
@@ -106,6 +107,7 @@ function browserEnv() {
     force: typeof window !== "undefined" && window.LITSA_TRACK_FORCE === true,
     notrack,
     hostname: typeof location !== "undefined" ? location.hostname : "",
+    origin: typeof location !== "undefined" ? location.origin : undefined,
   };
 }
 
