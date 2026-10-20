@@ -88,8 +88,18 @@
       </div>
       <p class="credits" id="credits">0 credits</p>
       <div id="checks" aria-live="polite"></div>
-      <ol class="chosen" id="chosen"></ol>
-      <p class="empty" id="empty">Add sections from the list to build this plan. Plans are saved in this browser only.</p>
+      <div class="views" role="tablist" aria-label="Show your plan as">
+        <button type="button" role="tab" id="view-tab-list" aria-controls="view-list" aria-selected="false">List</button>
+        <button type="button" role="tab" id="view-tab-week" aria-controls="view-week" aria-selected="true">Week</button>
+        <button type="button" role="tab" id="view-tab-agenda" aria-controls="view-agenda" aria-selected="false">Day by day</button>
+      </div>
+      <p class="empty" id="empty">Add sections from the list to build this plan. Hover over a section to preview where it lands. Plans are saved in this browser only.</p>
+      <div role="tabpanel" id="view-list" aria-labelledby="view-tab-list" hidden><ol class="chosen" id="chosen"></ol></div>
+      <div role="tabpanel" id="view-week" aria-labelledby="view-tab-week">
+        <div id="week"></div>
+        <button type="button" class="link" id="week-open">Open full-size week</button>
+      </div>
+      <div role="tabpanel" id="view-agenda" aria-labelledby="view-tab-agenda" hidden><div id="agenda"></div></div>
       <div class="tally" id="tally"></div>
       <div class="actions" id="actions">
         <button type="button" class="secondary" id="a-workday">List for Workday</button>
@@ -114,11 +124,13 @@
     </aside>
     </div>
 
-    <section class="week-wrap" aria-labelledby="week-h">
-      <h2 id="week-h">Your week</h2>
-      <div class="week" id="week"></div>
-    </section>
   </main>
+
+  <dialog class="detail weekdlg" id="weekdlg" aria-labelledby="weekdlg-h">
+    <h2 id="weekdlg-h">Your week</h2>
+    <div id="week-full"></div>
+    <form method="dialog"><button class="secondary">Close</button></form>
+  </dialog>
 
   <dialog class="detail" id="detail" aria-labelledby="detail-h">
     <div class="detail-body" id="detail-body"></div>
