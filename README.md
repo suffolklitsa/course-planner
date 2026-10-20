@@ -51,7 +51,7 @@ More detail in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Run it yourself
 
-The fastest way is a Codespace: click **Code → Codespaces → Create codespace on main**. Then, in the terminal:
+The fastest way is a Codespace: click **Code → Codespaces → Create codespace on staging**. Then, in the terminal:
 
 ```
 python3 scripts/build_site.py
@@ -77,6 +77,10 @@ python3 scripts/validate_data.py          # courses.json matches the contract
 | `scripts/` | `import_offerings.py`, `validate_data.py`, `build_site.py` |
 | `tests/` | Tests for the importer |
 | `docs/` | Architecture, data contract, roadmap, decisions |
+
+## Branches
+
+Pull requests go to `staging`, the default branch. `main` is the released version: maintainers promote `staging` to `main` with a pull request when a batch of changes is ready. Both branches are protected and need a review and passing checks.
 
 ## Contributing
 
