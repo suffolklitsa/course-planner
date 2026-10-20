@@ -2,6 +2,14 @@
 
 Short records of choices that shape the planner, newest first.
 
+**2026-10-20. Data refreshes publish as patch releases.** Production serves the newest release tag, so `scripts/refresh_data.sh` tags `vX.Y.Z+1` when the sections change. Code changes still release only when a maintainer tags them.
+
+**2026-10-20. "Taken" and "not interested" stay in the browser.** They hide courses and feed the prerequisite check. They're never uploaded, and the share link doesn't include them.
+
+**2026-10-20. Checks advise; they never block.** Prerequisites say "may require," credit and online notes link the rule, and nothing stops a student adding a section.
+
+**2026-10-20. The planner doesn't ask about academic standing.** Distance-education limits apply to students on Academic Warning or Guided Curriculum; the planner counts online courses and links the rule instead of asking.
+
 **2026-10-20. Lives on the club site.** The planner is served at suffolklitsa.org/planner rather than as its own site: one address students already know, shared styling and analytics.
 
 **2026-10-20. Data comes from the assistant, not a second scraper.** See ARCHITECTURE.md.

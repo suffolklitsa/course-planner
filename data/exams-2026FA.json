@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "term_code": "2026FA",
+  "source": {
+    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/examinations/exam-schedule/fall-exam-schedule",
+    "verified_at": "2026-08-26"
+  },
+  "exams": [
+    {
+      "title": "1B Civil Procedure",
+      "instructor": "Glannon",
+      "date": "2026-12-07",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "1C Civil Procedure",
+      "instructor": "Glannon",
+      "date": "2026-12-07",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Copyright Law",
+      "instructor": "Curtin",
+      "date": "2026-12-08",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Emerging Issues WEB",
+      "instructor": "Rustad",
+      "date": "2026-12-08",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "remote"
+    },
+    {
+      "title": "Environmental Law Survey",
+      "instructor": "Cox",
+      "date": "2026-12-08",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Federal Income Taxation",
+      "instructor": "Conway",
+      "date": "2026-12-08",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Law and Economics",
+      "instructor": "Robertson",
+      "date": "2026-12-08",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Business Entity Fundamentals WEB",
+      "instructor": "Pao",
+      "date": "2026-12-09",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "remote"
+    },
+    {
+      "title": "Advanced Torts WEB",
+      "instructor": "Rustad",
+      "date": "2026-12-10",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "remote"
+    },
+    {
+      "title": "International Criminal Law",
+      "instructor": "Cody",
+      "date": "2026-12-10",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Professional Responsibility",
+      "instructor": "Ward",
+      "date": "2026-12-10",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "1A Criminal Law",
+      "instructor": "Cody",
+      "date": "2026-12-11",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "1C Criminal Law",
+      "instructor": "Pokorak",
+      "date": "2026-12-11",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Antitrust",
+      "instructor": "Robertson",
+      "date": "2026-12-12",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Evidence",
+      "instructor": "Cavallaro",
+      "date": "2026-12-12",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "Immigration: Business",
+      "instructor": "Maiona",
+      "date": "2026-12-12",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "International IP Law",
+      "instructor": "Shabalala",
+      "date": "2026-12-12",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "State and Local Government",
+      "instructor": "Infranca",
+      "date": "2026-12-12",
+      "start": "09:30",
+      "end": "12:30",
+      "mode": "in-person"
+    },
+    {
+      "title": "4A Criminal Law",
+      "instructor": "Dai",
+      "date": "2026-12-12",
+      "start": "14:00",
+      "end": "17:00",
+      "mode": "in-person"
+    }
+  ],
+  "unparsed": [
+    "FALL CLASSES END (9:30 AM to 12:30 PM, week of 2026-11-30; not an exam)",
+    "READING DAY (9:30 AM to 12:30 PM, week of 2026-11-30; not an exam)",
+    "READING DAY (9:30 AM to 12:30 PM, week of 2026-11-30; not an exam)",
+    "Family Law WEB / Scheuerman (9:30 AM to 12:30 PM, week of 2026-11-30; day not recoverable (5 column groups for 6 days))",
+    "Evidence / Georges (9:30 AM to 12:30 PM, week of 2026-11-30; day not recoverable (5 column groups for 6 days))",
+    "Trusts and Estates / Curtin (9:30 AM to 12:30 PM, week of 2026-11-30; day not recoverable (5 column groups for 6 days))",
+    "Fundamentals of Law I / Janda (9:30 AM to 12:30 PM, week of 2026-11-30; day not recoverable (5 column groups for 6 days))",
+    "Fundamentals of Law I / Janda (9:30 AM to 12:30 PM, week of 2026-11-30; day not recoverable (5 column groups for 6 days))",
+    "NextGen Fundamentals of Law I / Janda (9:30 AM to 12:30 PM, week of 2026-11-30; day not recoverable (5 column groups for 6 days))",
+    "Trademark Law / Karol (2:00 PM to 5:00 PM, week of 2026-11-30; day not recoverable (2 column groups for 6 days))",
+    "Advanced Survey HJD / DeFabritiis (2:00 PM to 5:00 PM, week of 2026-11-30; day not recoverable (2 column groups for 6 days))",
+    "Advanced Survey / Ciarimboli (2:00 PM to 5:00 PM, week of 2026-11-30; day not recoverable (2 column groups for 6 days))",
+    "Advanced Survey / Kang (2:00 PM to 5:00 PM, week of 2026-11-30; day not recoverable (2 column groups for 6 days))",
+    "Advanced Survey WEB / Kang (2:00 PM to 5:00 PM, week of 2026-11-30; day not recoverable (2 column groups for 6 days))",
+    "NextGen Advanced Survey WEB / DeFabritiis (2:00 PM to 5:00 PM, week of 2026-11-30; day not recoverable (2 column groups for 6 days))",
+    "NextGen Advanced Survey HJD / DeFabritiis (2:00 PM to 5:00 PM, week of 2026-11-30; day not recoverable (2 column groups for 6 days))",
+    "Make up exams 12/4, 12/5 (9:30 AM to 12:30 PM, 2026-12-07; not an exam)",
+    "1D Civil Procedure / Darden (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "1A Torts / Eisenstat (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "Business Entity Fundamentals / Pizzano (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "Professional Responsibility WEB / Schendel (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "International Business Transactions / Gibson (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "Professional Responsibility / Boonin (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "1B Criminal Law / Cavallaro (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "1D Criminal Law / Cavallaro (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "1E Civil Procedure / Simard (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "First Amendment / Sullivan (2:00 PM to 5:00 PM, week of 2026-12-07; day not recoverable (4 column groups for 6 days))",
+    "Make up exams 12/7, 12/8, 12/9, 12/10, 12/11 (2:00 PM to 5:00 PM, 2026-12-12; not an exam)",
+    "Torts APO / Dyson (2:00 PM to 5:00 PM, 2026-12-12; APO doesn't say if the exam is remote)",
+    "4A Civil Procedure / Rehnquist (6:00 PM to 9:00 PM, week of 2026-12-07; day not recoverable (3 column groups for 6 days))",
+    "Business Entity Fundamentals / Polito (6:00 PM to 9:00 PM, week of 2026-12-07; day not recoverable (3 column groups for 6 days))",
+    "Intellectual Property Survey HYB / Karnakis (6:00 PM to 9:00 PM, week of 2026-12-07; day not recoverable (3 column groups for 6 days))",
+    "Criminal Law APO / Braatz (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "1E Criminal Law / Braatz (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Criminal Procedure / Ricciuti (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Medical Malpractice / Kelly (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Admiralty Law / Bromley (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Evidence / Borenstein (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Trusts and Estates WEB / Scheuerman (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Consumer Law / Ilin (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Labor Law / Lev/Henry (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Evidence WEB / Dyson (6:00 PM to 9:00 PM, week of 2026-12-07, continued after a page break; day not recoverable (3 column groups for 6 days))",
+    "Administrative Law WEB / Braatz (9:30 AM to 12:30 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Taxation of Mergers and Acquisitions WEB / Conway (9:30 AM to 12:30 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "1B Property / Karol (9:30 AM to 12:30 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "1C Property / Infranca (9:30 AM to 12:30 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "ERISA and the IRC WEB / Densberger (9:30 AM to 12:30 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Family Law Bar Topics / Anthony (9:30 AM to 12:30 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Make up exams 12/15, 12/16, 12/17 (9:30 AM to 12:30 PM, week of 2026-12-14; not an exam)",
+    "1A LPS (9:30 AM to 12:30 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "1B LPS (9:30 AM to 12:30 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "1A Contracts / Viswanathan (2:00 PM to 5:00 PM, week of 2026-12-14; day not recoverable (2 column groups for 6 days))",
+    "1D Contracts / An (2:00 PM to 5:00 PM, week of 2026-12-14; day not recoverable (2 column groups for 6 days))",
+    "1E Contracts / Shabalala (2:00 PM to 5:00 PM, week of 2026-12-14; day not recoverable (2 column groups for 6 days))",
+    "1C LPS (2:00 PM to 5:00 PM, week of 2026-12-14; day not recoverable (2 column groups for 6 days))",
+    "1D LPS (2:00 PM to 5:00 PM, week of 2026-12-14; day not recoverable (2 column groups for 6 days))",
+    "1E LPS (2:00 PM to 5:00 PM, week of 2026-12-14; day not recoverable (2 column groups for 6 days))",
+    "Criminal Procedure WEB / Reyes (4:30 PM to 7:30 PM, week of 2026-12-14; day not recoverable (1 column group for 6 days))",
+    "State Constitutional Law / Weishart (4:30 PM to 7:30 PM, week of 2026-12-14; day not recoverable (1 column group for 6 days))",
+    "Evidence / Wilton (4:30 PM to 7:30 PM, week of 2026-12-14; day not recoverable (1 column group for 6 days))",
+    "International Law / Dillon (4:30 PM to 7:30 PM, week of 2026-12-14; day not recoverable (1 column group for 6 days))",
+    "Professional Responsibility / Best (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Federal Income Tax / Scuderi (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Family Law Bar Topics / Peterson (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "5A Property / Grubel (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Military Law / Tully (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Commercial Law Sales / Sullivan (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Make up exams 12/12, 12/14 (6:00 PM to 9:00 PM, week of 2026-12-14; not an exam)",
+    "4A LPS (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "LPS APO (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Commercial Law Sales / McJohn (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Commercial Law Sales / McJohn (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))",
+    "Commercial Law Survey WEB / Rustad (6:00 PM to 9:00 PM, week of 2026-12-14; day not recoverable (3 column groups for 6 days))"
+  ]
+}

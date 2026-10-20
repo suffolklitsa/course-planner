@@ -8,7 +8,7 @@
 |---|---|---|
 | `schema_version` | number | `1` |
 | `generated_at` | `YYYY-MM-DD` | When the importer ran |
-| `sources` | list | `{id, url, verified_at}` for each Suffolk page used |
+| `sources` | list | `{id, url, verified_at, fetched_at}` for each Suffolk page used. `verified_at` is when a person last reviewed the page; `fetched_at` is when this copy was downloaded. The planner shows `fetched_at` as "checked". |
 | `terms` | list | `{code, name}`, for example `{"code": "2027SP", "name": "Spring 2027"}` |
 | `sections` | list | One entry per section, below |
 

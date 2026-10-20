@@ -2,16 +2,14 @@
 
 ## Version 1: spring schedule builder (before November registration)
 
-- [x] Course data importer and data contract
-- [x] Search and filters (term, division, format, requirements)
-- [x] Schedule with credit total, time conflicts and duplicate-course warnings
-- [ ] Week view of the chosen schedule
-- [ ] Shareable schedule link
-- [ ] Export to calendar (.ics)
-- [ ] Area of Focus filter
-- [ ] Accessibility and mobile check
-- [ ] Live at suffolklitsa.org/planner, with a weekly data refresh
-- [ ] One week of testing with LITSA members, then announced in the newsletter
+- [x] Course data importer and data contract, twice-daily refresh
+- [x] Search (including descriptions), sort, filters (division, format, area, credits, requirements, days, times)
+- [x] One card per course; profile (year, division); taken and not interested
+- [x] Plan A and B, shortlist, conflicts in results, prerequisites, exam conflicts, credit and online checks, requirement tally
+- [x] Week view, detail panel, Workday list, share link, calendar export, print view
+- [x] Data freshness note, disappearing-section warning, report-a-problem links
+- [ ] Sam's review on staging, then a week of testing with LITSA members
+- [ ] Release `v0.1.0` (puts it on suffolklitsa.org/planner) and announce it
 
 ## Version 2: graduation check and career-path survey (before April registration)
 

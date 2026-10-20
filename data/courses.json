@@ -5,27 +5,32 @@
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
-   "verified_at": "2026-10-05"
+   "verified_at": "2026-10-12",
+   "fetched_at": "2026-10-20"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
-   "verified_at": "2026-10-12"
+   "verified_at": "2026-10-19",
+   "fetched_at": "2026-10-20"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
-   "verified_at": "2026-09-11"
+   "verified_at": "2026-10-19",
+   "fetched_at": "2026-10-20"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
-   "verified_at": "2026-10-12"
+   "verified_at": "2026-10-19",
+   "fetched_at": "2026-10-20"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
-   "verified_at": "2026-10-12"
+   "verified_at": "2026-10-19",
+   "fetched_at": "2026-10-20"
   }
  ],
  "terms": [
@@ -59,7 +64,10 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "James Matthews | Andrew Garcia | Ashley Grant | Kyra DeTone"
+    "James Matthews",
+    "Andrew Garcia",
+    "Ashley Grant",
+    "Kyra DeTone"
    ],
    "prerequisites": "",
    "requirements": {
@@ -1339,7 +1347,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Karl Hartmann | Gregory Pickard"
+    "Karl Hartmann",
+    "Gregory Pickard"
    ],
    "prerequisites": "",
    "requirements": {
@@ -2730,7 +2739,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Philippe Mauldin | Alexander Gavis"
+    "Philippe Mauldin",
+    "Alexander Gavis"
    ],
    "prerequisites": "",
    "requirements": {
@@ -2940,7 +2950,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Teri Donaldson | Bob Cox"
+    "Teri Donaldson",
+    "Bob Cox"
    ],
    "prerequisites": "",
    "requirements": {
@@ -4294,7 +4305,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Andreia Ribas Precoma | Ragini Shah"
+    "Andreia Ribas Precoma",
+    "Ragini Shah"
    ],
    "prerequisites": "",
    "requirements": {
@@ -4446,7 +4458,7 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Bill Gabovitch"
+    "William Gabovitch"
    ],
    "prerequisites": "",
    "requirements": {
@@ -5227,7 +5239,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Gregory Ewing | Emily Khirisy"
+    "Gregory Ewing",
+    "Emily Khirisy"
    ],
    "prerequisites": "LAW Program of Study LLM Law Programs",
    "requirements": {
@@ -5337,7 +5350,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Katie Lev | Thomas Henry"
+    "Katie Lev",
+    "Thomas Henry"
    ],
    "prerequisites": "",
    "requirements": {
@@ -5609,7 +5623,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Kaitlin Brophy | Carwina Weng"
+    "Kaitlin Brophy",
+    "Carwina Weng"
    ],
    "prerequisites": "LAW Course",
    "requirements": {
@@ -5646,7 +5661,9 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Sam Glover | Quinten Steenhuis | David Colarusso"
+    "Sam Glover",
+    "Quinten Steenhuis",
+    "David Colarusso"
    ],
    "prerequisites": "",
    "requirements": {
@@ -7074,7 +7091,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Bob Smith | Kim McLaurin"
+    "Bob Smith",
+    "Kim McLaurin"
    ],
    "prerequisites": "Law 156 LAW 158 or LAW 552",
    "requirements": {
@@ -8652,7 +8670,9 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Christina Miller | Lynsey Legier | Christopher Boutin"
+    "Christina Miller",
+    "Lynsey Legier",
+    "Christopher Boutin"
    ],
    "prerequisites": "",
    "requirements": {
@@ -8861,7 +8881,8 @@
    "start_date": "2026-08-24",
    "end_date": "2026-12-17",
    "instructors": [
-    "Patrick Gallagher | Carlton King"
+    "Patrick Gallagher",
+    "Carlton King"
    ],
    "prerequisites": "Law 2200",
    "requirements": {
@@ -11165,20 +11186,25 @@
    "division": "Day",
    "meetings": [
     {
-     "day": "Tue",
-     "start": "10:00",
-     "end": "11:50"
+     "day": "Mon",
+     "start": "10:30",
+     "end": "11:45"
     },
     {
-     "day": "Thu",
-     "start": "10:00",
-     "end": "11:50"
+     "day": "Wed",
+     "start": "10:30",
+     "end": "11:45"
+    },
+    {
+     "day": "Fri",
+     "start": "10:30",
+     "end": "11:45"
     }
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Linda Sandstrom Simard"
+    "Joseph Glannon"
    ],
    "prerequisites": "Student is Law Section A Cohort",
    "requirements": {
@@ -11268,7 +11294,7 @@
    "tags": [
     "Law - Race, Equity and Law"
    ],
-   "description": "In 1961, the Supreme Court dusted off the Ku Klux Klan Act of 1871 (42 U.S.C. s. 1983) to provide a way for citizens to sue public officials for civil rights violations. These claims are often called \"constitutional torts.\" Today, nearly 40,000 civil rights cases are brought under s. 1983 each year. Many of these cases deal with police misconduct, such as illegal searches and seizures, excessive force, and racial profiling. This course will provide students an opportunity to learn how civil rights litigation works in practice. Students will have multiple opportunities to make oral arguments, write simulated memos, and draft briefs. The focus of this class will be to gain experience-and receive feedback-on applying s. 1983 doctrine to the craft of lawyering. Students will be asked to understand, and to argue, both sides of controversial issues, regardless of their personal opinions. Students will be required to submit a brief. MEETS EXPERIENTIAL LEARNING REQUIREMENT"
+   "description": "This course teaches how police misconduct cases work in the real world. It gives students the chance to sharpen their skills writing briefs and arguing motions. It also asks them to have hard discussions about what it means to hold police accountable under civil rights law. The law of police misconduct grew out of real-life injustices. A Chicago family was pulled from bed by officers who tore their home apart. Freedom Riders were arrested in a Mississippi bus terminal. Students were shot on an Ohio college campus. A fifteen-year-old was shot as he ran from a burglary. A grandfather was killed on the floor of his own Massachusetts home during a police raid. We start with those events. Each class is built around one landmark case. Each case is paired with a song, film, documentary, or piece of journalism from the time and place that produced it. Before we read what a court decided, we will ask what the world looked like to the people involved: what kind of place it was, how policing worked, and how the dispute ended up in court. From there, students learn the mechanics of a civil rights lawsuit under 42 U.S.C. § 1983. They will learn who can be sued, what a plaintiff has to prove, why so many claims fail, and what it takes to win. Several cases come from Massachusetts and the First Circuit, where many students will practice. Students will make oral arguments, write memos, and draft briefs, with regular feedback on each. They will be asked to argue both sides of hard questions, whatever their personal views. A final brief is required. By the end, students should understand what it takes to sue the police, or to defend them."
   },
   {
    "id": "2027SP-4004-2",
@@ -11305,7 +11331,7 @@
    "tags": [
     "Law - Race, Equity and Law"
    ],
-   "description": "In 1961, the Supreme Court dusted off the Ku Klux Klan Act of 1871 (42 U.S.C. s. 1983) to provide a way for citizens to sue public officials for civil rights violations. These claims are often called \"constitutional torts.\" Today, nearly 40,000 civil rights cases are brought under s. 1983 each year. Many of these cases deal with police misconduct, such as illegal searches and seizures, excessive force, and racial profiling. This course will provide students an opportunity to learn how civil rights litigation works in practice. Students will have multiple opportunities to make oral arguments, write simulated memos, and draft briefs. The focus of this class will be to gain experience-and receive feedback-on applying s. 1983 doctrine to the craft of lawyering. Students will be asked to understand, and to argue, both sides of controversial issues, regardless of their personal opinions. Students will be required to submit a brief. MEETS EXPERIENTIAL LEARNING REQUIREMENT"
+   "description": "This course teaches how police misconduct cases work in the real world. It gives students the chance to sharpen their skills writing briefs and arguing motions. It also asks them to have hard discussions about what it means to hold police accountable under civil rights law. The law of police misconduct grew out of real-life injustices. A Chicago family was pulled from bed by officers who tore their home apart. Freedom Riders were arrested in a Mississippi bus terminal. Students were shot on an Ohio college campus. A fifteen-year-old was shot as he ran from a burglary. A grandfather was killed on the floor of his own Massachusetts home during a police raid. We start with those events. Each class is built around one landmark case. Each case is paired with a song, film, documentary, or piece of journalism from the time and place that produced it. Before we read what a court decided, we will ask what the world looked like to the people involved: what kind of place it was, how policing worked, and how the dispute ended up in court. From there, students learn the mechanics of a civil rights lawsuit under 42 U.S.C. § 1983. They will learn who can be sued, what a plaintiff has to prove, why so many claims fail, and what it takes to win. Several cases come from Massachusetts and the First Circuit, where many students will practice. Students will make oral arguments, write memos, and draft briefs, with regular feedback on each. They will be asked to argue both sides of hard questions, whatever their personal views. A final brief is required. By the end, students should understand what it takes to sue the police, or to defend them."
   },
   {
    "id": "2027SP-2433-1",
@@ -11696,21 +11722,19 @@
    "division": "Day",
    "meetings": [
     {
-     "day": "Mon",
+     "day": "Tue",
      "start": "10:00",
      "end": "11:50"
     },
     {
-     "day": "Wed",
+     "day": "Thu",
      "start": "10:00",
      "end": "11:50"
     }
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
-   "instructors": [
-    "Jeffrey Pokorak"
-   ],
+   "instructors": [],
    "prerequisites": "Student is Law Section A Cohort",
    "requirements": {
     "experiential": false,
@@ -13056,7 +13080,8 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Teri Donaldson | Bob Cox"
+    "Teri Donaldson",
+    "Bob Cox"
    ],
    "prerequisites": "",
    "requirements": {
@@ -13519,6 +13544,67 @@
     "Law Areas of Focus - Areas of Focus Core Juvenile and Family Law"
    ],
    "description": "Survey of Family Law issues including the factual and legal underpinnings of marriage and divorce; state regulation of marriage and divorce; jurisdictional requirements including venue and domicile; grounds for divorce and separate support; alimony uniform and federal laws; division of marital property; custody and visitation of children; adoption; state intervention in child custody matters; domestic violence; assisted conception; domestic partnership; and the constitutional issues attendant to all of the above."
+  },
+  {
+   "id": "2027SP-2192-2",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2192",
+   "section": "2192-2",
+   "title": "Federal Courts",
+   "credits": 3.0,
+   "delivery": "In-Person",
+   "division": "Day",
+   "meetings": [
+    {
+     "day": "Tue",
+     "start": "16:00",
+     "end": "17:25"
+    },
+    {
+     "day": "Thu",
+     "start": "16:00",
+     "end": "17:25"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Linda Sandstrom Simard"
+   ],
+   "prerequisites": "LAW (LAW 104 or LAW 451) and (LAW 156 or LAW 552)",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": true,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Immigration",
+     "level": "recommended"
+    },
+    {
+     "name": "Human Rights",
+     "level": "core"
+    },
+    {
+     "name": "Bankruptcy",
+     "level": "core"
+    },
+    {
+     "name": "Criminal",
+     "level": "recommended"
+    },
+    {
+     "name": "Civil Litigation",
+     "level": "recommended"
+    }
+   ],
+   "concentrations": [],
+   "tags": [],
+   "description": "A study of the federal judicial system and its role in the governmental scheme. Among the topics to be covered: justiciability, including the doctrines of standing, ripeness and mootness, separation of powers, federalism, Congressional control of federal jurisdiction, legislative courts, sovereign immunity, Eleventh Amendment immunity, Ex Parte Young doctrine, Fourteenth Amendment, section 1983 litigation, absolute and qualified immunity in suits against state and federal officers, abstention and related doctrines, and federal habeas corpus."
   },
   {
    "id": "2027SP-2960-1",
@@ -14143,6 +14229,79 @@
    "concentrations": [],
    "tags": [],
    "description": "The Immigrant Justice Clinic (formerly the Immigration Law Clinic) provides law students an opportunity to gain practical hands on experience working on a broad range of issues impacting immigrant communities including detention, deportation and access to benefits. Students will provide legal support to grassroots organizations including direct representation of individuals and working on related projects. Through this community-based representation model, students will develop transferable skills such as interviewing, strategizing, oral presentations, and document drafting. The Immigration Law Clinic has changed its name to the Immigrant Justice Clinic to reflect its foundational insight that the community is best served when lawyers help empower marginalized individuals and groups to advocate for themselves. This is a full-year clinic offered for 10 credits (5 credits/semester) and students will receive separate letter grades at the end of the year for the clinic work and seminar. The clinic is open to day and evening students in their last two (2) years of law school and Accelerated JD students in their last year. Consistent with the concept of immigrant justice, the work that students will perform will center the needs and advocacy aspirations of immigrant communities and help to translate a complex system of laws and procedures for legibility by a lay audience. Concretely, this means that students in the clinic will work on projects and materials that help immigrant communities understand their rights, access litigation strategies and obtain critical information on themselves from government agencies without risking deportation. Each student team will work on an existing individual representation case and an existing or new project. The cases include applications for Temporary Protected Status, asylum, lawful permanent residence, and citizenship. The projects will include preparing and delivering know your rights materials in a “train the trainer” model, providing key information to communities on the inner workings of ICE and various immigration procedures, and preparing toolkits for communities seeking to advocate for immigration reform. The clinic includes a two-hour per week seminar. The class will focus on building students’ skills in client/community relationship building, collaboration, oral and written advocacy and presentations. The class will also provide students with background on various community organizations including their histories, theories of change and current work. Finally, the class will provide students with an understanding of the ways in which immigration laws impact communities on the ground. In the supervision meetings that occur outside of class, students will be given a guided path towards completing their case or project. Primarily in these meetings but also in class, students will be given an opportunity to engage in critical reflection of their performance, explore the ethical implications of their work, and develop an individual professional identity. Time commitment: The seminar for the clinic takes place on Wednesdays, 4-6pm. Each student will also need to set aside an hour a week for supervision with the clinic professor, days and times to be determined. The professional work in the Immigration Clinic requires a minimum of 13 hours per week outside of class and supervision meetings. This does require daytime hours as court and client meetings typically occur between 9:00am-6:00pm. Please speak with Professor Shah if you have questions about the time commitment. In the fall semester, there will be one all-day boot camp to introduce student to key legal concepts that you will use throughout the year. Date and time for the boot camp to be determined. Pre/co-requisites and Language Ability: Preference for students who have taken or are currently enrolled in Immigration Law and Constitutional Law and Criminal Procedure. Students are also strongly advised to take a Trial Practice course as trial skills are extremely helpful in the clinic. Students must have completed or be currently enrolled in Evidence. Fluency in relevant languages other than English (particularly Spanish and Portuguese) is preferred. Grading: Students are evaluated mid-year to assess progress and set goals. Students will receive separate letter grades at the end of the year for the seminar portion of the clinic and for the casework."
+  },
+  {
+   "id": "2027SP-2218-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2218",
+   "section": "2218-1",
+   "title": "Immigration Law",
+   "credits": 3.0,
+   "delivery": "In-Person",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Mon",
+     "start": "18:00",
+     "end": "19:25"
+    },
+    {
+     "day": "Wed",
+     "start": "18:00",
+     "end": "19:25"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Alexandra Peredo Carroll"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Diversity and Social Justice",
+     "level": "recommended"
+    },
+    {
+     "name": "Immigration",
+     "level": "core"
+    },
+    {
+     "name": "International",
+     "level": "recommended"
+    },
+    {
+     "name": "Human Rights",
+     "level": "core"
+    },
+    {
+     "name": "Public Service",
+     "level": "recommended"
+    },
+    {
+     "name": "Labor and Employment",
+     "level": "recommended"
+    },
+    {
+     "name": "Criminal",
+     "level": "recommended"
+    }
+   ],
+   "concentrations": [],
+   "tags": [
+    "Law - Perspective Courses (Law)",
+    "Law - Race, Equity and Law",
+    "Law Areas of Focus - Area of Focus Diversity and Social Justice"
+   ],
+   "description": "A study of the immigration, nationality, and naturalization laws of the United States. The topics discussed are: the constitutional bases of the immigration power; the immigrant selection system; grounds for admissibility of aliens; grounds for removal; change of status within the United States, including refugee and asylum status; review of immigration decisions through administrative procedures, appeals, and the courts; citizenship by birth and by naturalization; revocation of naturalization and expatriation; employer penalties for hiring illegal aliens; and benefits available to aliens. Prof. Shah requires a take home exam."
   },
   {
    "id": "2027SP-8085-1",
@@ -14865,43 +15024,6 @@
    "description": "This course is ideal for students who wish to hone their writing skills, as well as prepare or market themselves for a concurrent or future judicial internship, externship, or clerkship. This course is available to all students and is required for students enrolling in a judicial externship. The two credits granted for this course are experiential credits and are in addition to and independent of any externship credits awarded for the field placement experience. This experiential seminar will engage students in judicial writing practice and discussion of the unique ethical and legal responsibilities of working as an attorney in judicial organizations. This course will also provide education in bias, cultural competency, antiracism and professional identity formation. Externship experiences may also be discussed in class. Experienced guest speakers will provide insight into their experiences working for the judiciary and their prior or subsequent career paths. Readings, in-class exercises, and class participation are essential components of the course. Regular journal entries will be required. The course will not satisfy the writing requirement. The course will be graded on a H/P/LP/F basis. If a student in judicial externship placement is unable to take this course, or has taken it in the past, the student may request a waiver from the Director of Externship Programs and may be supervised individually. Students who have questions about the externship component of the course should contact the Director of Externship Programs, Mary Sawicki ( msawiski@suffolk.edu )."
   },
   {
-   "id": "2027SP-2750-1",
-   "term": "Spring 2027",
-   "term_code": "2027SP",
-   "course_number": "2750",
-   "section": "2750-1",
-   "title": "Jurisprudence: Law and Adjudication",
-   "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Day",
-   "meetings": [
-    {
-     "day": "Mon",
-     "start": "16:00",
-     "end": "17:50"
-    }
-   ],
-   "start_date": "2027-01-19",
-   "end_date": "2027-05-14",
-   "instructors": [
-    "Patrick Shin"
-   ],
-   "prerequisites": "",
-   "requirements": {
-    "experiential": false,
-    "writing": false,
-    "ma_bar": false,
-    "first_year": false,
-    "clinic_or_internship": false
-   },
-   "areas_of_focus": [],
-   "concentrations": [],
-   "tags": [
-    "Law - Perspective Courses (Law)"
-   ],
-   "description": "This course combines an introduction to basic topics in jurisprudence with practical writing projects that require students to think and write like a judge. Assigned readings will explore the concept of law, the possibility of objective legal analysis, and the role of judges in a democratic society. Writing assignments will require students to draft judicial opinions from varying theoretical perspectives. The course aims to provide an introduction to jurisprudence while building legal writing and analysis skills."
-  },
-  {
    "id": "2027SP-2147-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -15143,6 +15265,41 @@
    "description": "This upper-level seminar will study a range of legal and ethical issues particular to the world of visual art and its many participants (artists, galleries and art dealers, auction houses, museums, collectors, museum-goers, and others). Specific topics include artists rights (including copyright, resale royalties, and moral rights), commercial art market transactions (including the artist-dealer relationship, auction rules, tax considerations, and questions of authenticity and authentication), constitutional freedom of expression issues, and rules governing the collection, donation, and display of visual art, particularly for museums and their donors. The course will also pay close attention to the fate of works of art in wartime, the international trade in stolen and illegally exported cultural property, and indigenous cultural heritage."
   },
   {
+   "id": "2027SP-8020-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "8020",
+   "section": "8020-1",
+   "title": "Law in Action: Integrated Advocacy for Social Justice Law Reform",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Tue",
+     "start": "18:00",
+     "end": "19:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Carol Rose"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [],
+   "concentrations": [],
+   "tags": [],
+   "description": "Students will learn how to deploy a range of legal advocacy methods to achieve civil rights and civil liberties law reform. Using real-world case studies, students will engage in hands-on learning to design law reform campaigns that integrate litigation, legislation, ballot initiatives, field mobilization, and communications strategies to advance social justice law reform."
+  },
+  {
    "id": "2027SP-8078-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -15328,7 +15485,9 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Sam Glover | Quinten Steenhuis | David Colarusso"
+    "Sam Glover",
+    "Quinten Steenhuis",
+    "David Colarusso"
    ],
    "prerequisites": "",
    "requirements": {
@@ -16684,7 +16843,8 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Renee Landers | Sara Dillon"
+    "Renee Landers",
+    "Sara Dillon"
    ],
    "prerequisites": "",
    "requirements": {
@@ -16714,7 +16874,7 @@
    "division": "Day",
    "meetings": [
     {
-     "day": "Wed",
+     "day": "Fri",
      "start": "16:00",
      "end": "17:50"
     }
@@ -16722,7 +16882,8 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Bob Smith | Kim McLaurin"
+    "Bob Smith",
+    "Kim McLaurin"
    ],
    "prerequisites": "Law 156 LAW 158 or LAW 552",
    "requirements": {
@@ -17082,6 +17243,41 @@
    "description": "Modern LPS: Innovation & Technology is a skills-based experiential course aimed at fine-tuning and expanding upon the basic practice skills learned in LPS, but through the angle of modern approaches and technology tools lawyers use to deliver legal services today. Students will receive hands-on practice with document automation, structure, and security; legal research analytics; Generative AI; E-discovery; “justice tech” and legal process improvements; the business of law practice; remote lawyering best practices; cybersecurity basics; and developing a modern online presence and social professional network. The class is a combination of group discussion, exercises, guest speakers, and workshops with minimal lecture. Students will complete several short and varied skills assignments throughout the course that cumulatively satisfy the law school’s general legal writing requirement."
   },
   {
+   "id": "2027SP-8098-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "8098",
+   "section": "8098-1",
+   "title": "Music, Contracts & Negotiations",
+   "credits": 3.0,
+   "delivery": "Online Synchronous",
+   "division": "Day",
+   "meetings": [
+    {
+     "day": "Wed",
+     "start": "16:00",
+     "end": "16:55"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Sam Koolaq"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [],
+   "concentrations": [],
+   "tags": [],
+   "description": "This seminar will explore the legal, business, and ethical issues involved in music business contract negotiations, with a particular focus on the unique challenges faced by artists, songwriters, producers, and other music industry workers. Through a combination of case studies, contract reviews, and class discussions, students will gain an in-depth understanding of the legal frameworks and agreements that govern relationships between artists and their collaborators, record labels, managers, and other key stakeholders in the music industry. We will also delve into the ethical considerations that come into play for lawyers representing musicians in a transactional context often characterized by asymmetrical power dynamics."
+  },
+  {
    "id": "2027SP-2987-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -17288,26 +17484,26 @@
    "description": "Negotiation is a key skill that all practicing lawyers must have. This course teaches the theory and practice of negotiation in a legal context. Class time will focus on practice in simulations and role-plays, discussion of issues and problems raised by class exercises, analysis of videos, and brief lectures by the professor. Written assignments and grading policies may vary by section. Also available as an Intersession Course."
   },
   {
-   "id": "2027SP-2283-4",
+   "id": "2027SP-2283-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
    "course_number": "2283",
-   "section": "2283-4",
-   "title": "Negotiation",
+   "section": "2283-1",
+   "title": "Negotiation HJD",
    "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Evening",
+   "delivery": "Online Synchronous",
+   "division": "Day",
    "meetings": [
     {
-     "day": "Tue",
-     "start": "20:00",
-     "end": "21:50"
+     "day": "Mon",
+     "start": "10:00",
+     "end": "11:25"
     }
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Darren Braham"
+    "Gabriel Teninbaum"
    ],
    "prerequisites": "",
    "requirements": {
@@ -17372,26 +17568,26 @@
    "description": "Negotiation is a key skill that all practicing lawyers must have. This course teaches the theory and practice of negotiation in a legal context. Class time will focus on practice in simulations and role-plays, discussion of issues and problems raised by class exercises, analysis of videos, and brief lectures by the professor. Written assignments and grading policies may vary by section. Also available as an Intersession Course."
   },
   {
-   "id": "2027SP-2283-1",
+   "id": "2027SP-2283-4",
    "term": "Spring 2027",
    "term_code": "2027SP",
    "course_number": "2283",
-   "section": "2283-1",
-   "title": "Negotiation HJD",
+   "section": "2283-4",
+   "title": "Negotiation WEB",
    "credits": 2.0,
    "delivery": "Online Synchronous",
-   "division": "Day",
+   "division": "Evening",
    "meetings": [
     {
-     "day": "Mon",
-     "start": "10:00",
-     "end": "11:25"
+     "day": "Tue",
+     "start": "20:00",
+     "end": "21:50"
     }
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Gabriel Teninbaum"
+    "Darren Braham"
    ],
    "prerequisites": "",
    "requirements": {
@@ -18557,7 +18753,9 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Christina Miller | Lynsey Legier | Christopher Boutin"
+    "Christina Miller",
+    "Lynsey Legier",
+    "Christopher Boutin"
    ],
    "prerequisites": "",
    "requirements": {
@@ -18585,8 +18783,8 @@
    "meetings": [
     {
      "day": "Wed",
-     "start": "16:00",
-     "end": "17:50"
+     "start": "10:00",
+     "end": "11:50"
     }
    ],
    "start_date": "2027-01-19",
@@ -18749,24 +18947,19 @@
    "meetings": [
     {
      "day": "Mon",
-     "start": "12:00",
-     "end": "13:15"
+     "start": "14:00",
+     "end": "15:50"
     },
     {
      "day": "Wed",
-     "start": "12:00",
-     "end": "13:15"
-    },
-    {
-     "day": "Fri",
-     "start": "12:00",
-     "end": "13:15"
+     "start": "14:00",
+     "end": "15:50"
     }
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Steven Eisenstat"
+    "Patrick Shin"
    ],
    "prerequisites": "Student is Law Section B Cohort",
    "requirements": {
@@ -18880,23 +19073,23 @@
     {
      "day": "Mon",
      "start": "10:30",
-     "end": "11:45"
+     "end": "11:55"
     },
     {
      "day": "Wed",
      "start": "10:30",
-     "end": "11:45"
+     "end": "11:55"
     },
     {
      "day": "Fri",
      "start": "10:30",
-     "end": "11:45"
+     "end": "11:25"
     }
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Joseph Glannon"
+    "Steven Eisenstat"
    ],
    "prerequisites": "Student is Law Section E Cohort",
    "requirements": {
@@ -19701,19 +19894,19 @@
    "section": "2970-1",
    "title": "Twenty-First Century Legal Profession",
    "credits": 2.0,
-   "delivery": "In-Person",
+   "delivery": "Online Synchronous",
    "division": "Day",
    "meetings": [
     {
-     "day": "Tue",
-     "start": "18:00",
-     "end": "19:50"
+     "day": "Mon",
+     "start": "12:00",
+     "end": "13:50"
     }
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Kelli Proia"
+    "Gabriel Teninbaum"
    ],
    "prerequisites": "",
    "requirements": {
@@ -19819,7 +20012,8 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Nicole Oribhabor | Peter O'Karma"
+    "Nicole Oribhabor",
+    "Peter O'Karma"
    ],
    "prerequisites": "",
    "requirements": {
