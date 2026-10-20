@@ -25,6 +25,8 @@ The org-wide guide is at [suffolklitsa/.github](https://github.com/suffolklitsa/
 
 ## Refreshing the course data (maintainers)
 
+`scripts/refresh_data.sh` runs twice a day from cron on the server that has the Suffolk assistant: it fetches the five course pages with the assistant's fetcher into `.cache/sources`, rebuilds and validates `courses.json`, and if sections changed, commits to `main`, tags a patch release and merges `main` into `staging`. To run the steps by hand:
+
 The importer reads the Suffolk assistant's verified files, which live in a private repo. A maintainer with access runs:
 
 ```

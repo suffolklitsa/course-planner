@@ -68,6 +68,26 @@ class Build(unittest.TestCase):
         self.assertEqual(s["start_date"], "2027-01-19")
         self.assertEqual(data["terms"], [{"code": "2027SP", "name": "Spring 2027"}])
 
+    def test_several_professors_in_one_field(self):
+        row = {"title": "X", "section": "1000-1", "term": "Spring Law 2027", "meeting": "", "credits": 1.0, "delivery_mode": "In-Person",
+               "prerequisites": "", "instructors": ["Ann Lee | Bo Chen", " "], "description": "", "start_date": None, "end_date": None, "tags": []}
+        with tempfile.TemporaryDirectory() as d:
+            src = Path(d)
+            (src / f"{imp.OFFERINGS}.json").write_text(json.dumps([row]))
+            self.assertEqual(imp.build(src)["sections"][0]["instructors"], ["Ann Lee", "Bo Chen"])
+
+    def test_fetch_date_comes_from_the_manifest(self):
+        row = {"title": "X", "section": "1000-1", "term": "Spring Law 2027", "meeting": "", "credits": 1.0, "delivery_mode": "In-Person",
+               "prerequisites": "", "instructors": [], "description": "", "start_date": None, "end_date": None, "tags": []}
+        with tempfile.TemporaryDirectory() as d:
+            src = Path(d)
+            (src / f"{imp.OFFERINGS}.json").write_text(json.dumps([row]))
+            (src / f"{imp.OFFERINGS}.txt").write_text("Title: x\nCanonical URL: https://example.edu/c\nVerified at: 2026-10-12\n")
+            (src / "manifest.json").write_text(json.dumps({"generated_at": "2026-10-20T18:44:00Z", "sources": [{"id": imp.OFFERINGS}]}))
+            data = imp.build(src)
+        self.assertEqual(data["sources"][0]["fetched_at"], "2026-10-20")
+        self.assertEqual(data["sources"][0]["verified_at"], "2026-10-12")
+
 
 if __name__ == "__main__":
     unittest.main()

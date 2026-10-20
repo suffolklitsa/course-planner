@@ -6,3 +6,6 @@ build/
 dist/
 .DS_Store
 .env
+.cache/
+test-results/
+playwright-report/

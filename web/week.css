@@ -1,0 +1,124 @@
+/* Week view. Colors and spacing come from tokens.css. */
+.week {
+  --week-hour-h: 56px;
+  --week-gutter: 3.75rem;
+  --week-conflict: #C74634;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--ink);
+  font-size: var(--t-sm);
+}
+
+/* The grid scrolls sideways inside this box so the page never does. */
+.week-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-2);
+}
+.week-scroll:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.week-grid {
+  display: grid;
+  grid-template-columns: var(--week-gutter) repeat(var(--week-days), minmax(6.5rem, 1fr));
+  grid-template-rows: auto calc(var(--week-hour-h) * var(--week-span));
+  min-width: calc(var(--week-gutter) + var(--week-days) * 6.5rem);
+  padding-bottom: var(--s3);
+}
+
+.week-corner, .week-dayname {
+  grid-row: 1;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+}
+.week-dayname {
+  padding: var(--s2) var(--s1);
+  text-align: center;
+  font-weight: 600;
+  color: var(--ink-2);
+  border-left: 1px solid var(--line-soft);
+}
+
+.week-hours, .week-lines, .week-col { grid-row: 2; position: relative; }
+.week-hours { grid-column: 1; }
+.week-lines { grid-column: 2 / -1; pointer-events: none; }
+.week-hour {
+  position: absolute;
+  right: var(--s2);
+  margin-top: 1px;
+  line-height: 1.2;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.week-line { position: absolute; left: 0; right: 0; border-top: 1px solid var(--line-soft); }
+.week-col { border-left: 1px solid var(--line-soft); }
+
+.week-block {
+  position: absolute;
+  box-sizing: border-box;
+  min-height: 0;
+  margin: 0;
+  padding: 2px var(--s1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  overflow: hidden;
+  text-align: left;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.25;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--blue) 12%, var(--paper-2));
+  border: 1px solid color-mix(in srgb, var(--blue) 45%, var(--paper-2));
+  border-left: 4px solid var(--blue);
+  border-radius: 4px;
+  /* Leave a hairline between side-by-side blocks. */
+  border-right-width: 2px;
+  border-right-color: var(--paper-2);
+  cursor: pointer;
+}
+.week-block:hover { background: color-mix(in srgb, var(--blue) 20%, var(--paper-2)); }
+.week-block:focus-visible { outline: 3px solid var(--gold); outline-offset: 1px; z-index: 2; }
+.week-block-title { font-weight: 600; overflow-wrap: anywhere; }
+.week-block-meta { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+/* Conflicts use stripes, a dashed border and a text flag, so color is never the only signal. */
+.week-block.is-conflict {
+  background:
+    repeating-linear-gradient(135deg, color-mix(in srgb, var(--week-conflict) 16%, transparent) 0 6px, transparent 6px 12px),
+    color-mix(in srgb, var(--week-conflict) 6%, var(--paper-2));
+  border: 2px dashed var(--week-conflict);
+  border-left: 4px solid var(--week-conflict);
+}
+.week-block-flag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--week-conflict);
+}
+
+.week-unscheduled { margin-top: var(--s4); }
+.week-subhead { margin: 0 0 var(--s2); font-size: var(--t-sm); color: var(--ink-2); }
+.week-unscheduled-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s2); }
+.week-chip {
+  min-height: 40px;
+  padding: var(--s1) var(--s3);
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px dashed var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+.week-chip:hover { border-color: var(--blue); }
+.week-chip:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.week-summary { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; gap: var(--s1); color: var(--ink-2); }
+.week-summary-day { font-variant-numeric: tabular-nums; }

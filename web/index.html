@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Course Planner · LITSA</title>
-  <meta name="description" content="Plan your Suffolk Law spring schedule: find sections, see conflicts and credit totals.">
+  <meta name="description" content="Plan your Suffolk Law semester: find sections, see conflicts, credits and requirements, and make a list for Workday.">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="week.css">
+  <link rel="stylesheet" href="print.css">
   <script type="module" src="app.js"></script>
 </head>
 <body>
@@ -18,40 +20,110 @@
   <main class="layout">
     <section class="intro">
       <h1>Plan your semester</h1>
-      <p>Find sections, add them to your schedule, and see time conflicts and your credit total before registration. This is an unofficial student tool; Workday and the Registrar are the official record.</p>
+      <p>Find sections, try schedules, and check conflicts, credits and requirements before registration. This is an unofficial student tool; <strong>Workday and the Registrar are the official record.</strong></p>
+      <p class="fresh" id="fresh" role="status"></p>
+      <div class="missing" id="missing" hidden></div>
     </section>
 
+    <section class="profile" aria-labelledby="profile-h">
+      <h2 id="profile-h" class="visually-hidden">About you</h2>
+      <label>I'm a <select id="p-year"><option value="">Choose year</option><option>1L</option><option>2L</option><option>3L</option><option>4L</option></select></label>
+      <label>in the <select id="p-division"><option value="">Choose division</option><option>Day</option><option>Evening</option></select> division</label>
+      <span class="hint" id="p-hint">Setting this hides first-year required courses for upper-level students and checks credit minimums. It's saved only in this browser.</span>
+    </section>
+
+    <div class="workspace">
     <section class="finder" aria-labelledby="finder-h">
-      <h2 id="finder-h" class="visually-hidden">Find sections</h2>
+      <h2 id="finder-h" class="visually-hidden">Find courses</h2>
       <form class="filters" id="filters">
-        <label>Term <select id="f-term"></select></label>
-        <label class="grow">Search <input id="f-query" type="search" placeholder="Course, section number or professor" autocomplete="off"></label>
-        <label>Division
-          <select id="f-division"><option value="">Day and evening</option><option>Day</option><option>Evening</option></select>
-        </label>
-        <label>Format
-          <select id="f-delivery"><option value="">Any format</option><option>In-Person</option><option>Online Synchronous</option><option>Online Asynchronous</option><option>Hybrid</option></select>
-        </label>
-        <fieldset class="reqs">
-          <legend>Counts toward</legend>
-          <label><input type="checkbox" value="experiential"> Experiential</label>
-          <label><input type="checkbox" value="writing"> Writing requirement</label>
-          <label><input type="checkbox" value="ma_bar"> Mass. bar course</label>
-        </fieldset>
+        <div class="row">
+          <label>Term <select id="f-term"></select></label>
+          <label class="grow">Search <input id="f-query" type="search" placeholder="Course, section number, professor or topic (press /)" autocomplete="off"></label>
+          <label>Sort by <select id="f-sort"></select></label>
+        </div>
+        <details class="more-filters" id="more-filters">
+          <summary>Filters <span id="filter-count"></span></summary>
+          <div class="row">
+            <label>Division <select id="f-division"><option value="">Day and evening</option><option>Day</option><option>Evening</option></select></label>
+            <label>Format <select id="f-delivery"><option value="">Any format</option><option>In-Person</option><option>Online Synchronous</option><option>Online Asynchronous</option><option>Hybrid</option></select></label>
+            <label>Area of focus <select id="f-area"><option value="">Any area</option></select></label>
+            <label>Credits <select id="f-credits"><option value="">Any</option></select></label>
+          </div>
+          <fieldset class="checks" id="f-reqs"><legend>Counts toward</legend>
+            <label><input type="checkbox" value="experiential"> Experiential</label>
+            <label><input type="checkbox" value="writing"> Writing requirement</label>
+            <label><input type="checkbox" value="ma_bar"> Mass. bar course</label>
+          </fieldset>
+          <fieldset class="checks" id="f-avoid"><legend>No classes on</legend>
+            <label><input type="checkbox" value="Mon"> Mon</label><label><input type="checkbox" value="Tue"> Tue</label>
+            <label><input type="checkbox" value="Wed"> Wed</label><label><input type="checkbox" value="Thu"> Thu</label>
+            <label><input type="checkbox" value="Fri"> Fri</label>
+          </fieldset>
+          <fieldset class="checks" id="f-times"><legend>Only meets in the</legend>
+            <label><input type="checkbox" value="morning"> Morning</label>
+            <label><input type="checkbox" value="afternoon"> Afternoon</label>
+            <label><input type="checkbox" value="evening"> Evening</label>
+          </fieldset>
+          <fieldset class="checks"><legend>Show</legend>
+            <label><input type="checkbox" id="f-descriptions" checked> Search course descriptions too</label>
+            <label><input type="checkbox" id="f-hide-conflicts"> Hide sections that conflict with my plan</label>
+            <label><input type="checkbox" id="f-first-year"> First-year required courses</label>
+            <label><input type="checkbox" id="f-show-hidden"> Courses I've marked taken or not interested</label>
+          </fieldset>
+          <button type="button" class="link" id="f-reset">Reset filters</button>
+        </details>
       </form>
       <p class="count" id="count" aria-live="polite"></p>
       <ol class="results" id="results"></ol>
-      <button class="more" id="more" type="button" hidden>Show more</button>
+      <button class="more" id="more" type="button" hidden>Show more courses</button>
     </section>
 
     <aside class="schedule" aria-labelledby="sched-h">
-      <h2 id="sched-h">Your schedule</h2>
+      <div class="plan-head">
+        <h2 id="sched-h">Your schedule</h2>
+        <div class="plans" role="tablist" aria-label="Plans">
+          <button type="button" role="tab" id="plan-A" aria-selected="true">Plan A</button>
+          <button type="button" role="tab" id="plan-B" aria-selected="false">Plan B</button>
+        </div>
+      </div>
       <p class="credits" id="credits">0 credits</p>
-      <div id="warnings" aria-live="polite"></div>
+      <div id="checks" aria-live="polite"></div>
       <ol class="chosen" id="chosen"></ol>
-      <p class="empty" id="empty">Add sections from the list to build your schedule. It's saved in this browser only.</p>
+      <p class="empty" id="empty">Add sections from the list to build this plan. Plans are saved in this browser only.</p>
+      <div class="tally" id="tally"></div>
+      <div class="actions" id="actions">
+        <button type="button" class="secondary" id="a-workday">List for Workday</button>
+        <button type="button" class="secondary" id="a-share">Copy share link</button>
+        <button type="button" class="secondary" id="a-ics">Download calendar</button>
+        <button type="button" class="secondary" id="a-print">Print</button>
+        <button type="button" class="link" id="a-copy-plan">Copy to Plan B</button>
+        <button type="button" class="link" id="a-clear">Clear plan</button>
+      </div>
+      <div class="confirm" id="confirm" hidden></div>
+      <p class="toast" id="toast" role="status" aria-live="polite"></p>
+      <section class="workday" id="workday" hidden aria-labelledby="workday-h">
+        <h3 id="workday-h">Sections to register for</h3>
+        <table><thead><tr><th>Section</th><th>Course</th><th>Credits</th><th>When</th></tr></thead><tbody id="workday-rows"></tbody></table>
+        <button type="button" class="secondary" id="a-workday-copy">Copy list</button>
+      </section>
+      <section class="shortlist" aria-labelledby="short-h">
+        <h3 id="short-h">Shortlist</h3>
+        <ol id="shortlist"></ol>
+        <p class="empty" id="short-empty">Star sections to keep them in view without adding them to a plan.</p>
+      </section>
     </aside>
+    </div>
+
+    <section class="week-wrap" aria-labelledby="week-h">
+      <h2 id="week-h">Your week</h2>
+      <div class="week" id="week"></div>
+    </section>
   </main>
+
+  <dialog class="detail" id="detail" aria-labelledby="detail-h">
+    <div class="detail-body" id="detail-body"></div>
+    <form method="dialog"><button class="secondary">Close</button></form>
+  </dialog>
 
   <footer class="foot" id="foot"></footer>
 </body>
