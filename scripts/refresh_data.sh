@@ -20,7 +20,7 @@ cd "$REPO" || exit 1
 
 git checkout -q main && git pull -q --ff-only || { say "git pull failed"; exit 1; }
 
-if ! "$ASSIST/.venv/bin/python" "$ASSIST/scripts/sync_current_sources.py" --output-dir "$OUT" \
+if ! "$ASSIST/.venv/bin/python" "$ASSIST/scripts/sync_current_sources.py" --registry "$ASSIST/data/source_registry.yaml" --output-dir "$OUT" \
      --source-id law-course-offerings-2026-27 \
      --source-id law-fall-day-block-schedule-2026 --source-id law-fall-evening-block-schedule-2026 \
      --source-id law-spring-day-block-schedule-2027 --source-id law-spring-evening-block-schedule-2027 >>"$LOG" 2>&1; then
