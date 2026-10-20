@@ -100,8 +100,13 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .shortlist { margin-top: var(--s5); }
 .empty { color: var(--ink-3); font-size: var(--t-sm); }
 
-.week-wrap { min-width: 0; }
-.week-wrap h2 { font-size: 1.15rem; }
+.views { display: flex; gap: 4px; margin-bottom: var(--s3); }
+.views [role="tab"] { min-height: 36px; padding: 4px 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink-2); font-size: var(--t-sm); }
+.views [aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+/* Give the week grid more room in the panel when it's showing. */
+.workspace:has(#view-week:not([hidden])) { grid-template-columns: minmax(0, 1fr) 30rem; }
+#week-open { margin-top: var(--s2); }
+.weekdlg { max-width: 72rem; }
 
 .detail { max-width: 44rem; width: calc(100% - 32px); border: 1px solid var(--line); border-radius: 8px; padding: var(--s5); background: var(--paper-2); color: var(--ink); }
 .detail::backdrop { background: rgb(24 33 47 / .45); }
@@ -112,7 +117,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .foot { max-width: 76rem; margin: var(--s6) auto; padding: 0 16px var(--s6); color: var(--ink-3); font-size: var(--t-sm); }
 
 @media (max-width: 900px) {
-  .workspace { grid-template-columns: 1fr; grid-template-areas: "schedule" "finder"; }
+  .workspace, .workspace:has(#view-week:not([hidden])) { grid-template-columns: 1fr; grid-template-areas: "schedule" "finder"; }
   .schedule { position: static; max-height: none; }
 }
 @media (max-width: 480px) {

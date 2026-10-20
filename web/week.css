@@ -1,6 +1,7 @@
 /* Week view. Colors and spacing come from tokens.css. */
 .week {
-  --week-hour-h: 56px;
+  --week-hour-h: 72px;
+  --week-col-min: 6.5rem;
   --week-gutter: 3.75rem;
   --week-conflict: #C74634;
   min-width: 0;
@@ -22,9 +23,9 @@
 
 .week-grid {
   display: grid;
-  grid-template-columns: var(--week-gutter) repeat(var(--week-days), minmax(6.5rem, 1fr));
+  grid-template-columns: var(--week-gutter) repeat(var(--week-days), minmax(var(--week-col-min), 1fr));
   grid-template-rows: auto calc(var(--week-hour-h) * var(--week-span));
-  min-width: calc(var(--week-gutter) + var(--week-days) * 6.5rem);
+  min-width: calc(var(--week-gutter) + var(--week-days) * var(--week-col-min));
   padding-bottom: var(--s3);
 }
 
@@ -34,6 +35,8 @@
   border-bottom: 1px solid var(--line);
 }
 .week-dayname {
+  display: grid;
+  gap: 2px;
   padding: var(--s2) var(--s1);
   text-align: center;
   font-weight: 600;
@@ -70,7 +73,7 @@
   overflow: hidden;
   text-align: left;
   font: inherit;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.25;
   color: var(--ink);
   background: color-mix(in srgb, var(--blue) 12%, var(--paper-2));
@@ -84,8 +87,9 @@
 }
 .week-block:hover { background: color-mix(in srgb, var(--blue) 20%, var(--paper-2)); }
 .week-block:focus-visible { outline: 3px solid var(--gold); outline-offset: 1px; z-index: 2; }
-.week-block-title { font-weight: 600; overflow-wrap: anywhere; }
-.week-block-meta { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.week-block-title { font-weight: 600; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+.week-block-time, .week-block-meta { font-size: 13px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.week-block-tag { margin-left: 4px; padding: 0 5px; border-radius: 999px; font-size: 12px; background: var(--paper-2); border: 1px solid var(--line); color: var(--ink-2); }
 
 /* Conflicts use stripes, a dashed border and a text flag, so color is never the only signal. */
 .week-block.is-conflict {
@@ -96,7 +100,7 @@
   border-left: 4px solid var(--week-conflict);
 }
 .week-block-flag {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: .03em;
   text-transform: uppercase;
@@ -120,5 +124,60 @@
 .week-chip:hover { border-color: var(--blue); }
 .week-chip:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 
+/* (Day summaries now sit at the top of each column.) */
 .week-summary { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; gap: var(--s1); color: var(--ink-2); }
 .week-summary-day { font-variant-numeric: tabular-nums; }
+
+.week-dayname-day { font-weight: 600; color: var(--ink); }
+.week-dayname-sum { font-weight: 400; font-size: 12px; color: var(--ink-3); line-height: 1.25; }
+
+/* A section being previewed (hovered in the results): outlined, see-through, labeled. */
+.week-block.is-preview {
+  background: color-mix(in srgb, var(--blue) 5%, transparent);
+  border: 2px dashed var(--blue-deep);
+  border-left: 4px dashed var(--blue-deep);
+  z-index: 1;
+}
+.week-block.is-preview .week-block-flag { color: var(--blue-deep); }
+.week-block.is-preview.is-conflict { border-color: var(--week-conflict); }
+.week-chip.is-preview { border-color: var(--blue-deep); }
+
+/* Breaks between classes, written into the gap. */
+.week-gap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--ink-3);
+  pointer-events: none;
+}
+
+/* The compact grid inside the schedule panel. */
+.week.is-compact { --week-hour-h: 60px; --week-col-min: 4.75rem; --week-gutter: 3.25rem; }
+.week.is-compact .week-hour { font-size: 11px; }
+.week-block-title { flex-shrink: 0; }
+.week.is-compact .week-block-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.week.is-compact .week-block-sec { display: none; }
+.week.is-compact .week-block-tag { margin-left: 0; }
+
+/* Day by day */
+.agenda { display: grid; gap: var(--s4); }
+.agenda-empty { color: var(--ink-3); font-size: var(--t-sm); }
+.agenda-dayname { margin: 0; font-size: 1rem; }
+.agenda-sum { margin: 2px 0 var(--s2); font-size: var(--t-sm); color: var(--ink-3); }
+.agenda-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s2); }
+.agenda-item { display: grid; gap: 2px; padding: var(--s2) var(--s3); border-left: 4px solid var(--blue); background: color-mix(in srgb, var(--blue) 8%, var(--paper-2)); border-radius: 4px; }
+.agenda-item.is-conflict { border-left-color: var(--week-conflict, #C74634); }
+.agenda-item.is-preview { border-left-style: dashed; background: transparent; outline: 1px dashed var(--blue-deep); }
+.agenda-open { all: unset; cursor: pointer; display: grid; gap: 2px; }
+.agenda-open:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.agenda-time { font-size: var(--t-sm); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.agenda-title { font-weight: 600; font-size: 1rem; }
+.agenda-meta { font-size: 13px; color: var(--ink-2); }
+.agenda-clash { font-size: 13px; font-weight: 600; color: var(--week-conflict, #C74634); }
+.agenda-gap { font-size: 13px; font-style: italic; color: var(--ink-3); padding-left: var(--s3); }
