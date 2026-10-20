@@ -1,16 +1,19 @@
 // Browser tests for the planner page. Locally they use the installed Google Chrome; CI installs Chromium.
+// Set E2E_BASE_URL to run the same tests against a deployed copy, for example
+//   E2E_BASE_URL=https://staging.suffolklitsa.pages.dev/planner/ npx playwright test
 import { defineConfig } from "@playwright/test";
 
 const PORT = 8799;
+const remote = process.env.E2E_BASE_URL;
 export default defineConfig({
   testDir: "tests/e2e",
   timeout: 30_000,
-  retries: process.env.CI ? 1 : 0,
+  retries: process.env.CI || remote ? 1 : 0,
   use: {
-    baseURL: `http://127.0.0.1:${PORT}/`,
+    baseURL: remote || `http://127.0.0.1:${PORT}/`,
     ...(process.env.CI ? {} : { channel: "chrome" }),
   },
-  webServer: {
+  webServer: remote ? undefined : {
     command: `python3 scripts/build_site.py && python3 -m http.server ${PORT} --bind 127.0.0.1 -d dist`,
     url: `http://127.0.0.1:${PORT}/`,
     reuseExistingServer: !process.env.CI,

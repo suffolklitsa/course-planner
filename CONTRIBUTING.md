@@ -17,6 +17,16 @@ The org-wide guide is at [suffolklitsa/.github](https://github.com/suffolklitsa/
 - **Requirement rules need a source.** Any change that states what counts toward a requirement must link the Suffolk page or academic rule it comes from, and gets the `needs R&W review` label.
 - **Accessibility:** controls must work with a keyboard, have visible labels, and keep the focus outline. Check new layouts at 390px wide.
 
+## Browser tests
+
+`npm ci` once, then `npx playwright test` runs the browser tests against a local build (it uses your installed Chrome; CI installs Chromium). To check a deployed copy, for example staging before a release:
+
+```
+E2E_BASE_URL=https://staging.suffolklitsa.pages.dev/planner/ npx playwright test
+```
+
+New interface behavior gets a test in `tests/e2e/planner.spec.mjs`. Pick sections by rule from `data/courses.json` (for example "two spring sections that clash"), never by name, so the tests survive data refreshes.
+
 ## Pull requests
 
 - Run the three checks in the README; CI runs them too.
