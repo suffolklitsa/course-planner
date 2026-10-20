@@ -12,6 +12,7 @@ The LITSA course planner, served at suffolklitsa.org/planner. Plain HTML, CSS an
 python3 -m unittest discover -s tests     # importer tests
 node --test web/*.test.js                 # scheduling logic tests
 python3 scripts/validate_data.py          # courses.json matches docs/DATA.md
+npx playwright test                       # browser tests (npm ci first)
 python3 scripts/build_site.py && python3 -m http.server 8000 -d dist   # run it
 ```
 

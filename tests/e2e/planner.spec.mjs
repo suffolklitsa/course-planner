@@ -22,9 +22,9 @@ const noClash = (() => {
 })();
 
 async function fresh(page) {
-  await page.goto("/");
+  await page.goto("./");
   await page.evaluate(() => localStorage.clear());
-  await page.goto("/");
+  await page.goto("./");
   await expect(page.locator("#count")).toContainText("courses");
 }
 const search = (page, text) => page.locator("#f-query").fill(text);
@@ -132,16 +132,16 @@ test("the plan survives a reload and the shortlist works", async ({ page }) => {
 test("a share link loads its sections into the plan", async ({ page }) => {
   await fresh(page);
   const hash = encodeShare({ term: "2027SP", plan: "B", ids: [noClash[0].id, noClash[1].id] });
-  await page.goto(`/${hash}`);
+  await page.goto(`./${hash}`);
   await expect(page.locator("#toast")).toContainText("Loaded a shared plan");
   await expect(page.locator("#plan-B")).toHaveAttribute("aria-selected", "true");
   await expect(page.locator("#chosen li")).toHaveCount(2);
 });
 
 test("a saved section that disappeared is called out", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("./");
   await page.evaluate(() => localStorage.setItem("litsa.planner.v2", JSON.stringify({ version: 2, plans: { A: ["2027SP-0000-9"], B: [] }, seen: { "2027SP-0000-9": "Gone Seminar (0000-9)" } })));
-  await page.goto("/");
+  await page.goto("./");
   await expect(page.locator("#missing")).toContainText("Gone Seminar (0000-9)");
   await page.locator("#drop-missing").click();
   await expect(page.locator("#missing")).toBeHidden();
