@@ -1,0 +1,66 @@
+/* Print view: page title, the schedule list, the week view and the Workday table. Black on white. */
+@media print {
+  @page { margin: 0.5in; }
+
+  * {
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body { margin: 0; font-size: 10.5pt; line-height: 1.35; }
+
+  /* Hide everything at the top level except the title, the main area and the three printed parts. */
+  body > :not(header.top):not(main),
+  main > :not(.workspace):not(.week-wrap),
+  .finder, .foot, .shortlist, .actions, .toast, .confirm, button, input, select, textarea, form {
+    display: none !important;
+  }
+
+  header.top {
+    display: block;
+    padding: 0 0 6pt;
+    margin: 0 0 12pt;
+    border: 0;
+    border-bottom: 1pt solid #000;
+    font-size: 16pt;
+    font-weight: 700;
+  }
+  header.top a { text-decoration: none; }
+  header.top > * + * { margin-left: 0.4em; }
+
+  main, .workspace { display: block !important; max-width: none; margin: 0; padding: 0; }
+
+  .schedule, .week, .workday {
+    position: static !important;
+    width: auto;
+    max-width: none;
+    margin: 0 0 14pt;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  .schedule ol, .schedule ul { padding-left: 0; }
+  .schedule li { break-inside: avoid; border-color: #000 !important; }
+
+  /* The week grid scrolls on screen; on paper it has to show in full. */
+  .week { break-inside: avoid; }
+  .week * { overflow: visible !important; min-width: 0 !important; }
+  .week *, .week { border-color: #000 !important; }
+
+  .workday { break-inside: avoid; }
+  table.workday, .workday table { width: 100%; border-collapse: collapse; }
+  .workday th, .workday td {
+    border: 0.75pt solid #000;
+    padding: 3pt 5pt;
+    text-align: left;
+    vertical-align: top;
+    font-variant-numeric: tabular-nums;
+  }
+  .workday thead { display: table-header-group; }
+  .workday tr { break-inside: avoid; }
+
+  a { text-decoration: none; }
+  h2, h3 { break-after: avoid; }
+}

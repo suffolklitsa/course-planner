@@ -8,10 +8,29 @@ Plan your Suffolk Law semesters. The planner runs on the LITSA site at **suffolk
 
 **Version 1: spring schedule builder**
 
-- Search every spring 2027 section by course, section number or professor.
-- Filter by day or evening division, format (in person, online, hybrid), and what a course counts toward: experiential credit, the Legal Writing Requirement, or Massachusetts bar courses.
-- Add sections to a schedule and see your credit total, time conflicts, and when you've picked two sections of the same course.
-- Your schedule is saved in your own browser. Nothing is sent anywhere.
+*Finding courses*
+- One card per course, with its sections inside. Search by course, section number, professor or topic (course descriptions are searched too). Press `/` to jump to search.
+- Sort by title, course number, day and time, credits or professor.
+- Filter by division, format, Area of Focus, credits, what a course counts toward (experiential, writing requirement, Mass. bar course), days to avoid, and morning, afternoon or evening.
+- Tell it your year and division: upper-level students stop seeing first-year required sections, and day students get the 12-credit minimum check.
+- Mark courses **already taken** or **not interested** to hide them. "Taken" also feeds the prerequisite check.
+
+*Checking a plan*
+- **Plan A and Plan B**, plus a starred **shortlist**.
+- Sections that conflict with your plan are marked in the results, and you can hide them.
+- Warnings for time conflicts, the same course twice, exam conflicts and two exams in one day (once Suffolk posts the exam schedule), prerequisites you may be missing, day students under 12 credits, and several online courses (some students have limits).
+- What the plan does toward your requirements: experiential credits and writing-requirement courses.
+- A **week view** with long days, gaps and back-to-back classes.
+- A course **detail panel**: description, prerequisites, Areas of Focus, the professor's other courses, and a "Report a problem" link that opens a prefilled issue.
+
+*Taking it with you*
+- A **list for Workday**: your section numbers, ready to enter at registration.
+- A share link, a calendar file (.ics), and a print view.
+
+*Trust*
+- Every page says when the course data was last checked and that Workday is the record.
+- If a saved section disappears from Suffolk's listing (cancelled or renumbered), the planner says so.
+- Data refreshes twice a day during registration.
 
 **Version 2: graduation check and career-path survey** (before April registration)
 
@@ -27,7 +46,7 @@ The planner is a student tool built by LITSA's Build committee. Workday and the 
 
 ## Privacy
 
-Everything runs in your browser. The planner never uploads what you enter, and LITSA never sees your schedule or your record. The site counts page visits with cookieless analytics and nothing else. Any future feature that would store student information has to be reviewed with the Dean of Students first ([docs/DECISIONS.md](docs/DECISIONS.md)).
+Everything runs in your browser. Plans, the shortlist, your year and division, and the courses you mark taken stay in this browser; the planner never uploads them, and LITSA never sees them. A share link carries only section numbers. The site counts page visits with cookieless analytics and nothing else. Any future feature that would store student information has to be reviewed with the Dean of Students first ([docs/DECISIONS.md](docs/DECISIONS.md)).
 
 ## How it works
 
@@ -72,9 +91,10 @@ python3 scripts/validate_data.py          # courses.json matches the contract
 
 | Path | What's there |
 |---|---|
-| `web/` | The page: `index.html`, `app.js` (interface), `planner.js` (logic), `planner.test.js`, `styles.css`, `tokens.css` |
+| `web/` | The page. `app.js` draws it; logic lives in modules, each with tests: `planner.js` (search, sort, filters, conflicts), `state.js` (what's saved in the browser), `rules.js` (credit and requirement checks), `prereq.js`, `exams.js`, `share.js` (share link, calendar, Workday list), `week.js`, `freshness.js`, `report.js` |
 | `data/courses.json` | Every 2026-27 section, normalized. Don't edit by hand; rerun the importer. |
-| `scripts/` | `import_offerings.py`, `validate_data.py`, `build_site.py` |
+| `data/exams-<term>.json` | Final exam schedules, one per term once Suffolk posts it |
+| `scripts/` | `import_offerings.py`, `import_exams.py`, `validate_data.py`, `build_site.py`, `refresh_data.sh` (maintainers) |
 | `tests/` | Tests for the importer |
 | `docs/` | Architecture, data contract, roadmap, decisions |
 

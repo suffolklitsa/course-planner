@@ -148,7 +148,8 @@ def build(source: Path) -> dict:
             "meetings": parse_meeting(row.get("meeting", "")),
             "start_date": iso_date(row.get("start_date")),
             "end_date": iso_date(row.get("end_date")),
-            "instructors": [i.strip() for i in row.get("instructors") or [] if i.strip()],
+            # Some sections list several professors in one field, joined by " | ".
+            "instructors": [n.strip() for i in row.get("instructors") or [] for n in i.split("|") if n.strip()],
             "prerequisites": (row.get("prerequisites") or "").strip(),
             "requirements": requirements,
             "areas_of_focus": areas,
@@ -157,11 +158,21 @@ def build(source: Path) -> dict:
             "description": (row.get("description") or "").strip(),
         })
     sections.sort(key=lambda s: (s["term_code"], s["title"].lower(), s["section"]))
+    # "Verified at" is when a person last reviewed the page. "fetched_at" is when this copy was
+    # downloaded: from the sync's manifest when there is one, else the file's modification date.
+    fetched = {}
+    manifest = source / "manifest.json"
+    if manifest.exists():
+        m = json.loads(manifest.read_text(encoding="utf-8"))
+        for src in m.get("sources", []):
+            fetched[src.get("id")] = (src.get("fetched_at") or m.get("generated_at") or "")[:10]
     sources = []
     for name in [OFFERINGS, *BLOCK_SCHEDULES]:
-        h = read_header(source / f"{name}.txt")
+        txt = source / f"{name}.txt"
+        h = read_header(txt)
         if h:
-            sources.append({"id": name, "url": h.get("Canonical URL", ""), "verified_at": h.get("Verified at", "")})
+            when = fetched.get(name) or dt.date.fromtimestamp(txt.stat().st_mtime).isoformat()
+            sources.append({"id": name, "url": h.get("Canonical URL", ""), "verified_at": h.get("Verified at", ""), "fetched_at": when})
     return {
         "schema_version": SCHEMA_VERSION,
         "generated_at": dt.date.today().isoformat(),

@@ -18,6 +18,14 @@ def main() -> int:
         shutil.rmtree(dist)
     shutil.copytree(ROOT / "web", dist, ignore=shutil.ignore_patterns("*.test.js"))
     shutil.copy2(ROOT / "data" / "courses.json", dist / "courses.json")
+    # Exam schedules, one file per term (data/exams-2026FA.json and so on). A schedule is published
+    # only when every exam in it has a date: a partial schedule would make "no exam conflicts" untrue.
+    import json
+    for exams in sorted((ROOT / "data").glob("exams-*.json")):
+        if json.loads(exams.read_text(encoding="utf-8")).get("unparsed"):
+            print(f"skipped {exams.name}: some exams have no date yet")
+            continue
+        shutil.copy2(exams, dist / exams.name)
     print(f"built {dist}")
     return 0
 

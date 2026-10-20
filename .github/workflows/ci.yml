@@ -16,9 +16,14 @@ jobs:
           node-version: "22"
       - name: Importer tests
         run: python3 -m unittest discover -s tests -v
-      - name: Scheduling logic tests
+      - name: Logic tests
         run: node --test web/*.test.js
       - name: Data contract
         run: python3 scripts/validate_data.py
       - name: Build
         run: python3 scripts/build_site.py
+      - name: Browser tests
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+          npx playwright test
