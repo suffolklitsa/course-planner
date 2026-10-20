@@ -21,6 +21,26 @@ const noClash = (() => {
   }
 })();
 
+// Analytics requests never reach the real server: every one is answered here and recorded.
+// Tracking is off in automated browsers unless a test sets the hook, so most tests must send nothing.
+let hits = [];
+let forced = false;
+test.beforeEach(async ({ context }) => {
+  hits = [];
+  forced = false;
+  await context.route("**/analytics.suffolklitsa.org/**", (route) => {
+    hits.push(route.request().url());
+    return route.fulfill({ status: 204, body: "" });
+  });
+});
+test.afterEach(() => {
+  if (!forced) expect(hits).toEqual([]);
+});
+async function forceTracking(context) {
+  forced = true;
+  await context.addInitScript(() => { window.LITSA_TRACK_FORCE = true; });
+}
+
 async function fresh(page) {
   await page.goto("./");
   await page.evaluate(() => localStorage.clear());
@@ -321,4 +341,67 @@ test("the full-size week opens in a dialog", async ({ page }) => {
   await page.locator("#week-open").click();
   await expect(page.locator("#weekdlg")).toBeVisible();
   await expect(page.locator("#week-full .week-block").first()).toBeVisible();
+});
+
+// ---- Usage counts ----
+
+const sentPaths = () => hits.map((u) => new URL(u).searchParams.get("p"));
+
+test("usage counts send event names only, never search text, plan contents or the share link", async ({ page, context }) => {
+  await forceTracking(context);
+  await fresh(page);
+  const needle = "Zqxv Distinctive Query";
+  await search(page, needle);
+  await expect(page.locator("#count")).toContainText("0 courses");
+  await add(page, noClash[0]);
+  await page.locator("#view-tab-list").click();
+  await page.locator("#view-tab-week").click();
+  await page.locator("#a-share").click();
+  await expect(page.locator("#toast")).not.toBeEmpty();
+
+  // Open the link the planner just made, in a second tab, the way a friend would.
+  const hash = encodeShare({ term: "2027SP", plan: "A", ids: [noClash[0].id] });
+  const other = await context.newPage();
+  await other.goto(`./${hash}`);
+  await other.locator("#c-yes").click();
+  await expect(other.locator("#toast")).toContainText("Loaded a shared plan");
+
+  const expected = ["/planner/ev/search", `/planner/ev/add/${noClash[0].course_number}`, "/planner/ev/view/list",
+    "/planner/ev/view/week", "/planner/ev/share/create", "/planner/ev/share/open"];
+  await expect.poll(() => expected.filter((p) => !sentPaths().includes(p))).toEqual([]);
+  expect(sentPaths().filter((p) => p === "/planner/ev/search")).toHaveLength(1);
+
+  for (const u of hits) {
+    const url = new URL(u);
+    const decoded = decodeURIComponent(u);
+    expect(url.origin + url.pathname).toBe("https://analytics.suffolklitsa.org/collect");
+    expect([...url.searchParams.keys()]).toEqual(["sid", "h", "p", "r"]);
+    expect(url.searchParams.get("sid")).toBe("litsa");
+    expect(url.searchParams.get("h")).toBe(new URL(page.url()).origin);
+    expect(url.searchParams.get("r")).toBe("/planner/");
+    expect(url.searchParams.get("p")).toMatch(/^\/planner\/ev\/[a-z-]+(\/[a-z0-9-]+)?$/);
+    for (const text of [u, decoded]) {
+      expect(text.toLowerCase()).not.toContain("zqxv");
+      expect(text).not.toContain("#");
+      expect(text).not.toContain(noClash[0].section);
+      expect(text).not.toContain(noClash[0].id);
+      expect(text).not.toContain("t=2027SP");
+      expect(text).not.toContain("s=");
+    }
+  }
+});
+
+test("nothing is sent from an automated browser without the test hook", async ({ page, context }) => {
+  await fresh(page);
+  await search(page, "Zqxv Distinctive Query");
+  await add(page, noClash[0]);
+  await page.locator("#view-tab-week").click();
+  await page.locator("#a-share").click();
+  const hash = encodeShare({ term: "2027SP", plan: "A", ids: [noClash[0].id] });
+  const other = await context.newPage();
+  await other.goto(`./${hash}`);
+  await other.locator("#c-yes").click();
+  await expect(other.locator("#toast")).toContainText("Loaded a shared plan");
+  await page.waitForTimeout(500);
+  expect(hits).toEqual([]);
 });

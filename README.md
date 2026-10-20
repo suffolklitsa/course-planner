@@ -46,7 +46,36 @@ The planner is a student tool built by LITSA's Build committee. Workday and the 
 
 ## Privacy
 
-Everything runs in your browser. Plans, the shortlist, your year and division, and the courses you mark taken stay in this browser; the planner never uploads them, and LITSA never sees them. A share link carries only section numbers. The site counts page visits with cookieless analytics and nothing else. Any future feature that would store student information has to be reviewed with the Dean of Students first ([docs/DECISIONS.md](docs/DECISIONS.md)).
+Everything runs in your browser. Plans, the shortlist, your year and division, and the courses you mark taken stay in this browser; the planner never uploads them, and LITSA never sees them. A share link carries only section numbers. The site counts page visits and a short list of actions with cookieless analytics; the next section lists them. Any future feature that would store student information has to be reviewed with the Dean of Students first ([docs/DECISIONS.md](docs/DECISIONS.md)).
+
+## What the planner counts
+
+The planner counts how it gets used, so the Build committee can see which features help and what breaks. Each count goes to the LITSA site's own cookieless analytics as a visit to a made-up page, such as `/planner/ev/add/2155`. Nothing is counted in a browser that opted out at suffolklitsa.org/me/, in automated test browsers, or on a copy running on your own computer.
+
+It counts:
+
+- visits to the planner page;
+- adding a section, with the course number only (for example 2155, never the section);
+- switching to Plan B, and switching between the List, Week and Day-by-day views;
+- making a share link, and opening one;
+- printing, and clicking "Report a problem";
+- which filter was used, by its name only (for example "credits" or "no classes on"), never the value chosen, and which sort order was picked;
+- that a search happened, once per visit;
+- marking a course taken or not interested, and starring a section;
+- which kinds of warning appeared (time conflict, same course twice, prerequisites, credit minimum, online courses, exams), once per kind per visit;
+- errors by kind (a script error, a failed promise, or the course list not loading), once per kind per visit, with no error message.
+
+It never sends:
+
+- what you type into search;
+- your plans, your shortlist, or the section numbers in them;
+- your year or division;
+- share links, or anything after the `#` in the address;
+- your name, your email, or any ID that could tell one student from another.
+
+One limit: the credit-minimum warning appears only for day students, so counting it shows that some visitor chose the day division, though not who.
+
+The rules live in `web/track.js`. A count that isn't on its list is dropped before anything is sent.
 
 ## How it works
 
@@ -91,7 +120,7 @@ python3 scripts/validate_data.py          # courses.json matches the contract
 
 | Path | What's there |
 |---|---|
-| `web/` | The page. `app.js` draws it; logic lives in modules, each with tests: `planner.js` (search, sort, filters, conflicts), `state.js` (what's saved in the browser), `rules.js` (credit and requirement checks), `prereq.js`, `exams.js`, `share.js` (share link, calendar, Workday list), `week.js`, `freshness.js`, `report.js` |
+| `web/` | The page. `app.js` draws it; logic lives in modules, each with tests: `planner.js` (search, sort, filters, conflicts), `state.js` (what's saved in the browser), `rules.js` (credit and requirement checks), `prereq.js`, `exams.js`, `share.js` (share link, calendar, Workday list), `week.js`, `freshness.js`, `report.js`, `track.js` (usage counts) |
 | `data/courses.json` | Every 2026-27 section, normalized. Don't edit by hand; rerun the importer. |
 | `data/exams-<term>.json` | Final exam schedules, one per term once Suffolk posts it |
 | `scripts/` | `import_offerings.py`, `import_exams.py`, `validate_data.py`, `build_site.py`, `refresh_data.sh` (maintainers) |
