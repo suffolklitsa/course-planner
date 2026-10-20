@@ -10,6 +10,27 @@
   <link rel="stylesheet" href="week.css">
   <link rel="stylesheet" href="print.css">
   <script type="module" src="app.js"></script>
+  <!-- Page views, scroll depth, time on page and clicks out, through the LITSA site's own
+       analytics (Counterscale). Same rules as the rest of suffolklitsa.org: skipped for browsers
+       that opted out at /me/ and in automated tests. Counterscale sends the path and query only,
+       so a plan in a share link (after the #) never leaves the browser. On a local copy
+       /analytics.js does not exist and nothing is sent. -->
+  <script>
+  (function () {
+    var off = navigator.webdriver;
+    try { off = off || localStorage.getItem("litsa.notrack") === "1"; } catch (e) {}
+    if (off) return;
+    window.LITSA_ANALYTICS = { posthogKey: null };
+    var a = document.createElement("script");
+    a.src = "/analytics.js"; a.defer = true;
+    document.head.appendChild(a);
+    var s = document.createElement("script");
+    s.id = "counterscale-script"; s.defer = true;
+    s.setAttribute("data-site-id", "litsa");
+    s.src = "https://analytics.suffolklitsa.org/tracker.js";
+    document.head.appendChild(s);
+  })();
+  </script>
 </head>
 <body>
   <header class="top">

@@ -13,7 +13,7 @@ The org-wide guide is at [suffolklitsa/.github](https://github.com/suffolklitsa/
 - **Never edit `data/courses.json` by hand.** It's generated from Suffolk's pages by `scripts/import_offerings.py`. If the data is wrong, open an issue with the section number and what Suffolk's page says.
 - **Keep logic in `web/planner.js`** and keep it free of page code (`document`, `window`, `localStorage`). Every new function there gets a test in `web/planner.test.js`.
 - **No new dependencies** without a reason in the pull request. The planner has none today, and that keeps it easy to run anywhere.
-- **Nothing leaves the browser.** No uploads, no third-party scripts, no fonts or libraries from outside the site.
+- **A student's plan never leaves the browser.** No uploads, no third-party scripts, no fonts or libraries from outside the site. The only thing sent is the site's own cookieless analytics, and it never includes search text, plan contents or anything that identifies a student.
 - **Requirement rules need a source.** Any change that states what counts toward a requirement must link the Suffolk page or academic rule it comes from, and gets the `needs R&W review` label.
 - **Accessibility:** controls must work with a keyboard, have visible labels, and keep the focus outline. Check new layouts at 390px wide.
 
