@@ -217,3 +217,12 @@ test("printing shows the schedule and week, not the search", async ({ page }) =>
   await expect(page.locator(".schedule")).toBeVisible();
   await expect(page.locator("#week")).toBeVisible();
 });
+
+test("an empty plan hides the plan actions; adding a section shows them", async ({ page }) => {
+  await fresh(page);
+  await expect(page.locator("#actions")).toBeHidden();
+  await expect(page.locator("#empty")).toBeVisible();
+  await add(page, noClash[0]);
+  await expect(page.locator("#actions")).toBeVisible();
+  await expect(page.locator("#empty")).toBeHidden();
+});
