@@ -32,6 +32,12 @@ DAY_CODES = {"M": "Mon", "T": "Tue", "W": "Wed", "TH": "Thu", "F": "Fri", "SA": 
 MEETING_RE = re.compile(r"(?P<days>[A-Z_]+) \| (?P<start>\d{1,2}:\d\d [AP]M) - (?P<end>\d{1,2}:\d\d [AP]M)")
 TERM_RE = re.compile(r"^(?P<season>Fall|Spring|Summer)(?: Law)? (?P<year>\d{4})$")
 AREA_RE = re.compile(r"^Law Areas of Focus - Area of Focus (?P<level>Core|Recommended) (?P<name>.+)$")
+# Suffolk's Area of Focus tags aren't consistent ("Bankrupt" and "Bankruptcy" for the same area).
+AREA_ALIASES = {
+    "Bankrupt": "Bankruptcy",
+    "Environmental and Energy Law": "Environmental and Energy",
+    "Labor and Employment Law": "Labor and Employment",
+}
 REQUIREMENT_TAGS = {
     "Law - Experiential Learning": "experiential",
     "Law - Legal Writing Requirement": "writing",
@@ -95,7 +101,8 @@ def classify_tags(tags: list[str]) -> tuple[dict[str, bool], list[dict[str, str]
         if tag in REQUIREMENT_TAGS:
             requirements[REQUIREMENT_TAGS[tag]] = True
         elif (m := AREA_RE.match(tag)):
-            areas.append({"name": m["name"].strip(), "level": m["level"].lower()})
+            name = m["name"].strip()
+            areas.append({"name": AREA_ALIASES.get(name, name), "level": m["level"].lower()})
         elif tag.endswith("Concentration"):
             concentrations.append(tag.removeprefix("Law - ").removesuffix(" Concentration").strip())
         else:

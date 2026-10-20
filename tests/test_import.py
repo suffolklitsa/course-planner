@@ -48,6 +48,15 @@ class Tags(unittest.TestCase):
         self.assertEqual(other, ["Law - Race, Equity and Law"])
 
 
+class AreaNames(unittest.TestCase):
+    def test_inconsistent_area_tags_are_merged(self):
+        _, areas, _, _ = imp.classify_tags([
+            "Law Areas of Focus - Area of Focus Recommended Bankrupt",
+            "Law Areas of Focus - Area of Focus Core Labor and Employment Law",
+        ])
+        self.assertEqual([a["name"] for a in areas], ["Bankruptcy", "Labor and Employment"])
+
+
 class Build(unittest.TestCase):
     def test_end_to_end_on_a_tiny_source(self):
         row = {"title": "Entertainment Law", "section": "2155-1", "term": "Spring Law 2027", "status": "Open",
