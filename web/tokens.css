@@ -1,0 +1,40 @@
+/* Generated from suffolklitsa/design-system tokens/tokens.json. Do not edit here; change the design system. */
+:root {
+  --ink: #18212F;
+  --ink-2: #3A4657;
+  --ink-3: #657282;
+  --line: #D5DBE3;
+  --line-soft: #E6EAEF;
+  --paper: #F7F8FA;
+  --paper-2: #FFFFFF;
+  --blue: #1769E0;
+  --blue-deep: #0F4FAB;
+  --gold: #E5AD2D;
+  --display: "LITSA Display","Helvetica Neue",Arial,sans-serif;
+  --body: "Literata",Georgia,"Times New Roman",serif;
+  --t-xs: 12px;
+  --t-sm: 14px;
+  --t-base: 16px;
+  --t-md: 18px;
+  --t-lg: 21px;
+  --t-xl: 26px;
+  --t-2xl: 33px;
+  --t-3xl: 44px;
+  --t-4xl: 60px;
+  --t-5xl: 82px;
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+  --s9: 96px;
+  --s10: 128px;
+  --s11: 192px;
+  --wrap: 1180px;
+  --rail: 172px;
+  --gap: 56px;
+  --measure: 58ch;
+}

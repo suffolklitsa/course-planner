@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Planner · LITSA</title>
+  <meta name="description" content="Plan your Suffolk Law spring schedule: find sections, see conflicts and credit totals.">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/">LITSA</a>
+    <span class="crumb">Course Planner</span>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <h1>Plan your semester</h1>
+      <p>Find sections, add them to your schedule, and see time conflicts and your credit total before registration. This is an unofficial student tool; Workday and the Registrar are the official record.</p>
+    </section>
+
+    <section class="finder" aria-labelledby="finder-h">
+      <h2 id="finder-h" class="visually-hidden">Find sections</h2>
+      <form class="filters" id="filters">
+        <label>Term <select id="f-term"></select></label>
+        <label class="grow">Search <input id="f-query" type="search" placeholder="Course, section number or professor" autocomplete="off"></label>
+        <label>Division
+          <select id="f-division"><option value="">Day and evening</option><option>Day</option><option>Evening</option></select>
+        </label>
+        <label>Format
+          <select id="f-delivery"><option value="">Any format</option><option>In-Person</option><option>Online Synchronous</option><option>Online Asynchronous</option><option>Hybrid</option></select>
+        </label>
+        <fieldset class="reqs">
+          <legend>Counts toward</legend>
+          <label><input type="checkbox" value="experiential"> Experiential</label>
+          <label><input type="checkbox" value="writing"> Writing requirement</label>
+          <label><input type="checkbox" value="ma_bar"> Mass. bar course</label>
+        </fieldset>
+      </form>
+      <p class="count" id="count" aria-live="polite"></p>
+      <ol class="results" id="results"></ol>
+      <button class="more" id="more" type="button" hidden>Show more</button>
+    </section>
+
+    <aside class="schedule" aria-labelledby="sched-h">
+      <h2 id="sched-h">Your schedule</h2>
+      <p class="credits" id="credits">0 credits</p>
+      <div id="warnings" aria-live="polite"></div>
+      <ol class="chosen" id="chosen"></ol>
+      <p class="empty" id="empty">Add sections from the list to build your schedule. It's saved in this browser only.</p>
+    </aside>
+  </main>
+
+  <footer class="foot" id="foot"></footer>
+</body>
+</html>
