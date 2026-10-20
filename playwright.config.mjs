@@ -12,6 +12,9 @@ export default defineConfig({
   use: {
     baseURL: remote || `http://127.0.0.1:${PORT}/`,
     ...(process.env.CI ? {} : { channel: "chrome" }),
+    // Tests answer analytics requests themselves (see planner.spec.mjs). If one ever slips past them,
+    // the analytics host doesn't resolve, so no real hit can be counted.
+    launchOptions: { args: ["--host-resolver-rules=MAP analytics.suffolklitsa.org ~NOTFOUND"] },
   },
   webServer: remote ? undefined : {
     command: `python3 scripts/build_site.py && python3 -m http.server ${PORT} --bind 127.0.0.1 -d dist`,
