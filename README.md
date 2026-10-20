@@ -20,7 +20,7 @@ Plan your Suffolk Law semesters. The planner runs on the LITSA site at **suffolk
 - Sections that conflict with your plan are marked in the results, and you can hide them.
 - Warnings for time conflicts, the same course twice, exam conflicts and two exams in one day (once Suffolk posts the exam schedule), prerequisites you may be missing, day students under 12 credits, and several online courses (some students have limits).
 - What the plan does toward your requirements: experiential credits and writing-requirement courses.
-- A **week view** with long days, gaps and back-to-back classes.
+- Your plan as a **list**, a **week** grid or a **day-by-day** list, right in the schedule panel. Hover over or focus any section to **preview** where it would land, and any clash, before adding it. The week shows each day's span at the top and writes breaks into the gaps; phones open on the day-by-day list, which is also the easiest view for screen readers. A full-size week opens in its own window.
 - A course **detail panel**: description, prerequisites, Areas of Focus, the professor's other courses, and a "Report a problem" link that opens a prefilled issue.
 
 *Taking it with you*

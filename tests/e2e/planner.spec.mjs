@@ -226,3 +226,99 @@ test("an empty plan hides the plan actions; adding a section shows them", async 
   await expect(page.locator("#actions")).toBeVisible();
   await expect(page.locator("#empty")).toBeHidden();
 });
+
+// ---- Week view: panel tabs, preview, readability, day by day ----
+
+const toMin = (t) => +t.slice(0, 2) * 60 + +t.slice(3);
+const gapPair = (() => {
+  for (const a of timed) for (const b of timed) {
+    if (a.course_number === b.course_number) continue;
+    for (const m of a.meetings) for (const n of b.meetings) {
+      if (m.day === n.day && toMin(n.start) - toMin(m.end) >= 75 && !findConflicts([a, b]).length) return [a, b];
+    }
+  }
+})();
+
+test("the week shows in the schedule panel by default, and the tab choice is remembered", async ({ page }) => {
+  await fresh(page);
+  await page.evaluate(() => localStorage.removeItem("litsa.planner.view"));
+  await page.reload();
+  await expect(page.locator("#view-week")).toBeVisible();
+  await add(page, noClash[0]);
+  await page.locator("#view-tab-list").click();
+  await expect(page.locator("#view-list")).toBeVisible();
+  await expect(page.locator("#view-week")).toBeHidden();
+  await page.reload();
+  await expect(page.locator("#view-tab-list")).toHaveAttribute("aria-selected", "true");
+});
+
+test("hovering a section previews it in the week, and the preview names the clash", async ({ page }) => {
+  await fresh(page);
+  await page.locator("#view-tab-week").click();
+  await add(page, clash[0]);
+  await search(page, clash[1].section);
+  const row = card(page, clash[1]).locator(".sec", { hasText: clash[1].section });
+  await row.hover();
+  const preview = page.locator("#week .week-block.is-preview").first();
+  await expect(preview).toBeVisible();
+  await expect(preview).toHaveAttribute("aria-label", new RegExp(`preview, not in your plan, conflicts with ${clash[0].title}`));
+  await page.locator("h1").hover();
+  await expect(page.locator("#week .week-block.is-preview")).toHaveCount(0);
+});
+
+test("week blocks use readable text and say the time inside", async ({ page }) => {
+  await fresh(page);
+  await page.locator("#view-tab-week").click();
+  await add(page, noClash[0]);
+  const block = page.locator("#week .week-block").first();
+  await expect(block.locator(".week-block-time")).toContainText("to");
+  const size = await block.locator(".week-block-title").evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+  expect(size).toBeGreaterThanOrEqual(14);
+});
+
+test("conflicting blocks name the course they clash with", async ({ page }) => {
+  await fresh(page);
+  await page.locator("#view-tab-week").click();
+  await add(page, clash[0]);
+  await add(page, clash[1]);
+  await expect(page.locator("#week .week-block.is-conflict").first()).toHaveAttribute("aria-label", /conflicts with /);
+});
+
+test("breaks between classes are written into the week and the day-by-day list", async ({ page }) => {
+  test.skip(!gapPair, "no pair with a long break this term");
+  await fresh(page);
+  await page.locator("#view-tab-week").click();
+  await add(page, gapPair[0]);
+  await add(page, gapPair[1]);
+  await expect(page.locator("#week .week-gap").first()).toContainText("break");
+  await expect(page.locator("#week .week-dayname-sum").filter({ hasText: "2 classes" }).first()).toBeVisible();
+  await page.locator("#view-tab-agenda").click();
+  await expect(page.locator("#agenda .agenda-gap").first()).toContainText("break");
+});
+
+test("day by day lists classes in order and spells out conflicts", async ({ page }) => {
+  await fresh(page);
+  await add(page, clash[0]);
+  await add(page, clash[1]);
+  await page.locator("#view-tab-agenda").click();
+  await expect(page.locator("#agenda .agenda-dayname").first()).toBeVisible();
+  await expect(page.locator("#agenda .agenda-clash").first()).toContainText("Conflicts with");
+});
+
+test("phones open on the day-by-day list", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await fresh(page);
+  await page.evaluate(() => localStorage.removeItem("litsa.planner.view"));
+  await page.reload();
+  await expect(page.locator("#view-agenda")).toBeVisible();
+  await expect(page.locator("#view-tab-agenda")).toHaveAttribute("aria-selected", "true");
+});
+
+test("the full-size week opens in a dialog", async ({ page }) => {
+  await fresh(page);
+  await page.locator("#view-tab-week").click();
+  await add(page, noClash[0]);
+  await page.locator("#week-open").click();
+  await expect(page.locator("#weekdlg")).toBeVisible();
+  await expect(page.locator("#week-full .week-block").first()).toBeVisible();
+});

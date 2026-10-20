@@ -8,7 +8,7 @@ import { reportUrl } from "./report.js";
 import { buildCatalog, checkPrerequisites, prerequisiteBadge } from "./prereq.js";
 import { matchExams, examConflicts, examSummary } from "./exams.js";
 import { encodeShare, decodeShare, sharedIds, buildIcs, icsFilename, workdayRows, workdayList, copyText } from "./share.js";
-import { renderWeek } from "./week.js";
+import { renderWeek, renderAgenda } from "./week.js";
 
 const PAGE = 30;
 const $ = (id) => document.getElementById(id);
@@ -22,6 +22,16 @@ let examBySection = new Map();
 let catalog = new Map();
 let state = st.load();
 let shown = PAGE;
+let previewId = null;
+const VIEW_KEY = "litsa.planner.view";
+const VIEWS = ["list", "week", "agenda"];
+let view = loadView();
+
+// Phones default to the day-by-day list; five day columns don't fit at 390px.
+function loadView() {
+  try { const v = localStorage.getItem(VIEW_KEY); if (VIEWS.includes(v)) return v; } catch { /* storage blocked */ }
+  return window.matchMedia && window.matchMedia("(max-width: 600px)").matches ? "agenda" : "week";
+}
 const OFFERINGS_URL = "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings";
 
 function persist() { st.save(state); }
@@ -111,7 +121,12 @@ function sectionRow(s, f) {
       <button type="button" class="${inPlan ? "secondary" : "primary"} add" aria-pressed="${inPlan}">${inPlan ? `In Plan ${state.active}` : "Add"}</button>
     </div>
   </li>`);
-  row.querySelector(".add").addEventListener("click", () => { state = st.toggleChosen(state, s.id, label(s)); persist(); render(); });
+  row.querySelector(".add").addEventListener("click", () => { previewId = null; state = st.toggleChosen(state, s.id, label(s)); persist(); render(); });
+  // Hovering or focusing a section shows where it would land in the week, before adding it.
+  row.addEventListener("mouseenter", () => setPreview(s.id));
+  row.addEventListener("mouseleave", () => setPreview(null));
+  row.addEventListener("focusin", () => setPreview(s.id));
+  row.addEventListener("focusout", (e) => { if (!row.contains(e.relatedTarget)) setPreview(null); });
   row.querySelector(".star").addEventListener("click", () => { state = st.toggleShortlist(state, s.id, label(s)); persist(); render(); });
   return row;
 }
@@ -217,8 +232,44 @@ function renderSchedule() {
     return li;
   }));
 
-  const conflictIds = new Set(findConflicts(picked).flatMap((c) => [c.a, c.b]));
-  renderWeek($("week"), picked, { conflictIds, onSelect: (id) => openDetail(byId.get(id).course_number) });
+  renderPlanViews();
+}
+
+function setPreview(id) {
+  if (id && (st.chosenIds(state).includes(id) || byId.get(id)?.term_code !== term())) id = null;
+  if (id === previewId) return;
+  previewId = id;
+  renderPlanViews();
+}
+
+// The plan as a week grid or a day-by-day list, with the previewed section drawn in if there is one.
+function renderPlanViews() {
+  const picked = chosen();
+  const preview = previewId ? byId.get(previewId) : null;
+  const drawn = preview ? [...picked, preview] : picked;
+  const conflicts = findConflicts(drawn);
+  const conflictIds = new Set(conflicts.flatMap((c) => [c.a, c.b]));
+  const conflictNames = new Map();
+  for (const c of conflicts) {
+    conflictNames.set(c.a, [...(conflictNames.get(c.a) || []), byId.get(c.b).title]);
+    conflictNames.set(c.b, [...(conflictNames.get(c.b) || []), byId.get(c.a).title]);
+  }
+  const previewIds = new Set(preview ? [preview.id] : []);
+  const onSelect = (id) => openDetail(byId.get(id).course_number);
+  for (const v of VIEWS) {
+    $(`view-tab-${v}`).setAttribute("aria-selected", String(view === v));
+    $(`view-tab-${v}`).tabIndex = view === v ? 0 : -1;
+    $(`view-${v}`).hidden = view !== v;
+  }
+  if (view === "week") renderWeek($("week"), drawn, { conflictIds, previewIds, conflictNames, onSelect, compact: true });
+  if (view === "agenda") renderAgenda($("agenda"), drawn, { conflictNames, previewIds, onSelect });
+  if ($("weekdlg").open) renderWeek($("week-full"), drawn, { conflictIds, previewIds, conflictNames, onSelect });
+}
+
+function setView(v) {
+  view = v;
+  try { localStorage.setItem(VIEW_KEY, v); } catch { /* storage blocked */ }
+  renderPlanViews();
 }
 
 function renderMissing() {
@@ -280,6 +331,15 @@ function confirmInPanel(text, onYes) {
   $("c-yes").addEventListener("click", () => { box.hidden = true; onYes(); });
   $("c-no").addEventListener("click", () => { box.hidden = true; });
   $("c-yes").focus();
+}
+
+function wireViews() {
+  for (const v of VIEWS) $(`view-tab-${v}`).addEventListener("click", () => setView(v));
+  $("week-open").addEventListener("click", () => {
+    const d = $("weekdlg");
+    if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", "");
+    renderPlanViews();
+  });
 }
 
 function wireActions() {
@@ -384,6 +444,7 @@ async function start() {
   await loadExams();
   wireFilters();
   wireActions();
+  wireViews();
   renderFooter();
   render();
   applySharedLink();
