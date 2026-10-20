@@ -4,6 +4,8 @@
 
 :root { --alert: #C74634; --alert-soft: #F6E3DF; --ok: #007A5E; }
 * { box-sizing: border-box; }
+/* Elements with their own display (flex, grid) would otherwise ignore the hidden attribute. */
+[hidden] { display: none !important; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body, "Literata", Georgia, serif); font-size: var(--t-base, 1rem); line-height: 1.5; }
 a { color: var(--blue-deep); }
 h1, h2, h3 { line-height: 1.2; text-wrap: balance; }
