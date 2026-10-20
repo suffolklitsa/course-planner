@@ -2,13 +2,14 @@
 import { describeMeetings, findConflicts, duplicateCourses, matchesFilters, groupByCourse, sortGroups, SORTS,
          conflictsWith, queryMatchedOnlyInDescription, totalCredits } from "./planner.js";
 import * as st from "./state.js";
-import { allChecks, requirementTally, RULE_LINKS } from "./rules.js";
+import { allChecks, creditLoad, onlineCount, requirementTally, RULE_LINKS } from "./rules.js";
 import { freshnessNote, checkedOn } from "./freshness.js";
 import { reportUrl } from "./report.js";
 import { buildCatalog, checkPrerequisites, prerequisiteBadge } from "./prereq.js";
 import { matchExams, examConflicts, examSummary } from "./exams.js";
 import { encodeShare, decodeShare, sharedIds, buildIcs, icsFilename, workdayRows, workdayList, copyText } from "./share.js";
 import { renderWeek, renderAgenda } from "./week.js";
+import { track, FILTER_NAMES } from "./track.js";
 
 const PAGE = 30;
 const $ = (id) => document.getElementById(id);
@@ -121,13 +122,13 @@ function sectionRow(s, f) {
       <button type="button" class="${inPlan ? "secondary" : "primary"} add" aria-pressed="${inPlan}">${inPlan ? `In Plan ${state.active}` : "Add"}</button>
     </div>
   </li>`);
-  row.querySelector(".add").addEventListener("click", () => { previewId = null; state = st.toggleChosen(state, s.id, label(s)); persist(); render(); });
+  row.querySelector(".add").addEventListener("click", () => { previewId = null; if (!inPlan) track("add", s.course_number); state = st.toggleChosen(state, s.id, label(s)); persist(); render(); });
   // Hovering or focusing a section shows where it would land in the week, before adding it.
   row.addEventListener("mouseenter", () => setPreview(s.id));
   row.addEventListener("mouseleave", () => setPreview(null));
   row.addEventListener("focusin", () => setPreview(s.id));
   row.addEventListener("focusout", (e) => { if (!row.contains(e.relatedTarget)) setPreview(null); });
-  row.querySelector(".star").addEventListener("click", () => { state = st.toggleShortlist(state, s.id, label(s)); persist(); render(); });
+  row.querySelector(".star").addEventListener("click", () => { if (!starred) track("shortlist"); state = st.toggleShortlist(state, s.id, label(s)); persist(); render(); });
   return row;
 }
 
@@ -156,8 +157,8 @@ function courseCard(g, f) {
   const ids = g.sections.map((s) => s.id);
   card.querySelector(".details").addEventListener("click", () => openDetail(first.course_number));
   card.querySelector(".title-btn").addEventListener("click", () => openDetail(first.course_number));
-  card.querySelector(".taken").addEventListener("click", () => { state = st.toggleTaken(state, g.course_number, idsAllTerms(g.course_number)); persist(); render(); toast(taken ? "Unmarked." : `Marked ${g.title} as taken.`); });
-  card.querySelector(".nope").addEventListener("click", () => { state = st.toggleNotInterested(state, g.course_number, idsAllTerms(g.course_number)); persist(); render(); toast(notInterested ? "Showing it again." : `Hid ${g.title}.`); });
+  card.querySelector(".taken").addEventListener("click", () => { if (!taken) track("taken"); state = st.toggleTaken(state, g.course_number, idsAllTerms(g.course_number)); persist(); render(); toast(taken ? "Unmarked." : `Marked ${g.title} as taken.`); });
+  card.querySelector(".nope").addEventListener("click", () => { if (!notInterested) track("not-interested"); state = st.toggleNotInterested(state, g.course_number, idsAllTerms(g.course_number)); persist(); render(); toast(notInterested ? "Showing it again." : `Hid ${g.title}.`); });
   return card;
 }
 
@@ -194,13 +195,20 @@ function renderSchedule() {
   for (const c of ex.sameSlot) warn.push(`<li class="bad"><strong>Exam conflict:</strong> ${esc(byId.get(c.a).title)} and ${esc(byId.get(c.b).title)} have exams at the same time (${esc(c.date)}).</li>`);
   for (const c of ex.sameDay) warn.push(`<li><strong>Two exams in one day:</strong> ${c.ids.map((id) => esc(byId.get(id).title)).join(" and ")} on ${esc(c.date)}.</li>`);
   for (const m of allChecks(picked, state.profile)) warn.push(`<li class="${m.level === "warn" ? "bad" : ""}">${esc(m.text)} <a href="${m.link}" target="_blank" rel="noopener">Rule</a></li>`);
+  let prereqNote = false;
   for (const s of picked) {
     const p = checkPrerequisites(s, { taken: new Set(state.taken), year: state.profile.year, division: state.profile.division, catalog });
-    if (p.status === "may-be-missing" || p.status === "unchecked") warn.push(`<li><strong>${esc(s.title)}:</strong> ${p.messages.map(esc).join(" ")}</li>`);
+    if (p.status === "may-be-missing" || p.status === "unchecked") { prereqNote = true; warn.push(`<li><strong>${esc(s.title)}:</strong> ${p.messages.map(esc).join(" ")}</li>`); }
   }
   if (picked.length && !examBySection.size) warn.push(`<li class="quiet">The planner doesn't have this term's exam schedule yet, so exam conflicts can't be checked.</li>`);
   if (picked.some((s) => !s.meetings.length)) warn.push(`<li class="quiet">Conflicts are checked only for sections with set meeting times.</li>`);
   const clear = picked.length && !findConflicts(picked).length && !duplicateCourses(picked).length;
+  // Which kinds of warning students see, once each per page load (track.js), never which courses.
+  const shownWarnings = {
+    conflict: findConflicts(picked).length, duplicate: duplicateCourses(picked).length, exam: ex.sameSlot.length + ex.sameDay.length,
+    prereq: prereqNote, credits: creditLoad(picked, state.profile).messages.length, online: onlineCount(picked).messages.length,
+  };
+  for (const [type, shown] of Object.entries(shownWarnings)) if (shown) track("warning", type);
   $("checks").innerHTML = (clear ? `<p class="ok">No time conflicts among sections with set meeting times.</p>` : "")
     + (warn.length ? `<ul class="warn">${warn.join("")}</ul>` : "");
 
@@ -306,7 +314,7 @@ function openDetail(courseNumber) {
     <p class="meta">Course ${esc(courseNumber)} · ${esc(s.term)} · ${list.length} section${list.length === 1 ? "" : "s"}</p>
     <div class="badges">${[...new Set(list.flatMap(sectionBadges))].map((b) => `<span class="badge">${esc(b)}</span>`).join("")}</div>
     <h3>Sections</h3>
-    <ul>${list.map((x) => `<li><strong>${esc(x.section)}</strong> · ${esc(describeMeetings(x))} · ${esc(x.instructors.join(", ") || "Professor not listed")} · ${esc(x.delivery)} · ${x.credits} cr${examSummary(x, examBySection) ? ` · ${esc(examSummary(x, examBySection))}` : ""} · <a href="${reportUrl(x, checkedOn(data))}" target="_blank" rel="noopener">Report a problem</a></li>`).join("")}</ul>
+    <ul>${list.map((x) => `<li><strong>${esc(x.section)}</strong> · ${esc(describeMeetings(x))} · ${esc(x.instructors.join(", ") || "Professor not listed")} · ${esc(x.delivery)} · ${x.credits} cr${examSummary(x, examBySection) ? ` · ${esc(examSummary(x, examBySection))}` : ""} · <a class="report" href="${reportUrl(x, checkedOn(data))}" target="_blank" rel="noopener">Report a problem</a></li>`).join("")}</ul>
     <h3>Description</h3>
     <p>${esc(s.description || "Suffolk's listing has no description.")}</p>
     <h3>Prerequisites</h3>
@@ -334,7 +342,7 @@ function confirmInPanel(text, onYes) {
 }
 
 function wireViews() {
-  for (const v of VIEWS) $(`view-tab-${v}`).addEventListener("click", () => setView(v));
+  for (const v of VIEWS) $(`view-tab-${v}`).addEventListener("click", () => { track("view", v === "agenda" ? "day" : v); setView(v); });
   $("week-open").addEventListener("click", () => {
     const d = $("weekdlg");
     if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", "");
@@ -343,7 +351,7 @@ function wireViews() {
 }
 
 function wireActions() {
-  for (const p of ["A", "B"]) $(`plan-${p}`).addEventListener("click", () => { state = st.switchPlan(state, p); persist(); render(); });
+  for (const p of ["A", "B"]) $(`plan-${p}`).addEventListener("click", () => { if (p === "B") track("plan-b"); state = st.switchPlan(state, p); persist(); render(); });
   $("a-copy-plan").addEventListener("click", () => {
     const to = state.active === "A" ? "B" : "A";
     const go = () => { state = st.copyPlan(state, state.active, to); persist(); render(); toast(`Copied to Plan ${to}.`); };
@@ -352,7 +360,7 @@ function wireActions() {
   $("a-clear").addEventListener("click", () => confirmInPanel(`Clear all ${st.chosenIds(state).length} sections from Plan ${state.active}?`, () => { state = st.clearPlan(state); persist(); render(); }));
   $("a-workday").addEventListener("click", () => { const w = $("workday"); w.hidden = !w.hidden; if (!w.hidden) w.scrollIntoView({ block: "nearest" }); });
   $("a-workday-copy").addEventListener("click", async () => toast((await copyText(workdayList(chosen()))) ? "Copied the list." : "Couldn't copy; select the table instead."));
-  $("a-share").addEventListener("click", async () => toast((await copyText(shareLink())) ? "Link copied. Anyone who opens it sees this plan." : shareLink()));
+  $("a-share").addEventListener("click", async () => { track("share", "create"); toast((await copyText(shareLink())) ? "Link copied. Anyone who opens it sees this plan." : shareLink()); });
   $("a-ics").addEventListener("click", () => {
     const blob = new Blob([buildIcs(chosen(), { calendarName: `Suffolk Law ${data.terms.find((t) => t.code === term())?.name || ""} (LITSA planner)` })], { type: "text/calendar" });
     const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: icsFilename(term()) });
@@ -360,16 +368,26 @@ function wireActions() {
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
     toast("Calendar downloaded. Holidays and recess aren't removed; check against the academic calendar.");
   });
-  $("a-print").addEventListener("click", () => { $("workday").hidden = false; window.print(); });
+  $("detail-body").addEventListener("click", (e) => { if (e.target.closest("a.report")) track("report"); });
+  $("a-print").addEventListener("click", () => { track("print"); $("workday").hidden = false; window.print(); });
+}
+
+// Counts which control was used: that someone searched (never the text), the sort, or a filter's name.
+function countFilterUse(target) {
+  if (target.id === "f-query") { if (target.value.trim()) track("search"); return; }
+  if (target.id === "f-sort") { track("sort", target.value); return; }
+  const name = FILTER_NAMES[target.id] || FILTER_NAMES[target.closest("fieldset")?.id];
+  if (name) track("filter", name);
 }
 
 function wireFilters() {
   const rerender = () => { shown = PAGE; renderResults(); };
-  $("filters").addEventListener("input", (e) => { if (e.target.id === "f-term") { renderSchedule(); } rerender(); });
+  $("filters").addEventListener("input", (e) => { if (e.target.id === "f-term") { renderSchedule(); } countFilterUse(e.target); rerender(); });
   $("filters").addEventListener("submit", (e) => e.preventDefault());
   $("f-hide-conflicts").addEventListener("change", rerender);
   $("more").addEventListener("click", () => { shown += PAGE; renderResults(); });
   $("f-reset").addEventListener("click", () => {
+    track("filter", "reset");
     for (const i of document.querySelectorAll("#more-filters input[type=checkbox]")) i.checked = i.id === "f-descriptions";
     for (const id of ["f-division", "f-delivery", "f-area", "f-credits"]) $(id).value = "";
     applyProfileDefaults();
@@ -410,7 +428,7 @@ function applySharedLink() {
   if (!ids.length) return;
   $("f-term").value = shared.term;
   const plan = shared.plan || state.active;
-  const apply = () => { state = st.switchPlan(state, plan); state = st.setChosen(state, ids); persist(); render(); toast(`Loaded a shared plan with ${ids.length} sections into Plan ${plan}.`); };
+  const apply = () => { track("share", "open"); state = st.switchPlan(state, plan); state = st.setChosen(state, ids); persist(); render(); toast(`Loaded a shared plan with ${ids.length} sections into Plan ${plan}.`); };
   if (state.plans[plan].length) confirmInPanel(`Someone shared a plan with ${ids.length} sections. Replace your Plan ${plan} with it?`, apply); else apply();
 }
 
@@ -452,7 +470,12 @@ async function start() {
   window.addEventListener("hashchange", applySharedLink);
 }
 
+// Errors are counted by kind only, once each per page load; no message or stack is sent.
+window.addEventListener("error", () => track("err", "script"));
+window.addEventListener("unhandledrejection", () => track("err", "promise"));
+
 start().catch((err) => {
+  track("err", "data");
   $("count").textContent = "The course list didn't load. Refresh to try again.";
   console.error(err);
 });
