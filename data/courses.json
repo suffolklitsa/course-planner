@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-20",
+ "generated_at": "2026-10-21",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
    "verified_at": "2026-10-12",
-   "fetched_at": "2026-10-20"
+   "fetched_at": "2026-10-21"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-20"
+   "fetched_at": "2026-10-21"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-20"
+   "fetched_at": "2026-10-21"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-20"
+   "fetched_at": "2026-10-21"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-20"
+   "fetched_at": "2026-10-21"
   }
  ],
  "terms": [
@@ -12967,7 +12967,7 @@
    ],
    "concentrations": [],
    "tags": [],
-   "description": "This course provides a broad survey of the legal implications of the employment relationship, primarily outside of collective bargaining environments. Wrongful discharge claims, employment contracts, conditions of work, employment discrimination, and workplace safety are among the topics covered. While the main focus is practical, we also spend time examining the social and economic implications of regulating the employment relationship. Classes are devoted primarily to discussion, as well as to working through hypothetical problems and some lecturing. This course is relevant to practice areas such as employment law, business law, general litigation, and public interest law. Evaluation is by a take-home essay exam and a short term paper on a topic of the student's choosing. The course grade is based on (1) a take-home exam and (2) a term paper, which may be used to fulfill the upper level writing requirement. No laptop use is permitted in this class unless approved by the Dean of Students office. This course cannot be taken if you have already taken Employment Law - Lawyering Approach course."
+   "description": "This course provides a broad survey of the legal implications of the employment relationship, primarily outside of collective bargaining environments. Wrongful discharge claims, employment contracts, conditions of work, employment discrimination, and workplace safety are among the topics covered. While the main focus is practical, we also spend time examining the social and economic implications of regulating the employment relationship. Classes are conducted primarily in discussion mode, along with lectures and review problems. This course is relevant to practice areas such as employment & labor law, business law, general litigation, and public interest law. The course grade is based on a timed, in-class, open book final examination. No laptop use is permitted in this class unless approved by the Dean of Students office. (Note: This course may no longer be used to fulfill the Legal Writing Requirement.)"
   },
   {
    "id": "2027SP-2678-1",
@@ -17248,7 +17248,7 @@
    "term_code": "2027SP",
    "course_number": "8098",
    "section": "8098-1",
-   "title": "Music, Contracts & Negotiations",
+   "title": "Music Contracts & Negotiations",
    "credits": 3.0,
    "delivery": "Online Synchronous",
    "division": "Day",
@@ -18386,9 +18386,9 @@
    "division": "Day",
    "meetings": [
     {
-     "day": "Thu",
-     "start": "14:00",
-     "end": "15:50"
+     "day": "Mon",
+     "start": "10:00",
+     "end": "11:50"
     }
    ],
    "start_date": "2027-01-19",
