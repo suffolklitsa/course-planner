@@ -17976,7 +17976,7 @@
    "term_code": "2027SP",
    "course_number": "4006",
    "section": "4006-1",
-   "title": "Private Placement Externship Seminar",
+   "title": "Private Sector Externship Seminar",
    "credits": 2.0,
    "delivery": "In-Person",
    "division": "Evening",
@@ -18011,15 +18011,15 @@
    "term_code": "2027SP",
    "course_number": "4006",
    "section": "4006-2",
-   "title": "Private Placement Externship Seminar",
+   "title": "Private Sector Externship Seminar",
    "credits": 2.0,
    "delivery": "In-Person",
    "division": "Day",
    "meetings": [
     {
-     "day": "Thu",
-     "start": "14:00",
-     "end": "15:50"
+     "day": "Mon",
+     "start": "10:00",
+     "end": "11:50"
     }
    ],
    "start_date": "2027-01-19",
@@ -18380,7 +18380,7 @@
    "term_code": "2027SP",
    "course_number": "4003",
    "section": "4003-1",
-   "title": "Public Interest Lawyering",
+   "title": "Public Interest Externship Seminar",
    "credits": 2.0,
    "delivery": "In-Person",
    "division": "Day",
@@ -18393,7 +18393,9 @@
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
-   "instructors": [],
+   "instructors": [
+    "Reyna Ramirez"
+   ],
    "prerequisites": "",
    "requirements": {
     "experiential": false,
@@ -18413,7 +18415,7 @@
    "term_code": "2027SP",
    "course_number": "4003",
    "section": "4003-2",
-   "title": "Public Interest Lawyering",
+   "title": "Public Interest Externship Seminar",
    "credits": 2.0,
    "delivery": "In-Person",
    "division": "Evening",
@@ -18790,7 +18792,7 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Jeffrey Pokorak"
+    "Michelle Menken"
    ],
    "prerequisites": "Law 2518 Has Completed or In Progress",
    "requirements": {
@@ -20012,7 +20014,6 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Nicole Oribhabor",
     "Peter O'Karma"
    ],
    "prerequisites": "",
