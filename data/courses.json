@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-21",
+ "generated_at": "2026-10-22",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
-   "verified_at": "2026-10-12",
-   "fetched_at": "2026-10-21"
+   "verified_at": "2026-10-22",
+   "fetched_at": "2026-10-22"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-21"
+   "fetched_at": "2026-10-22"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-21"
+   "fetched_at": "2026-10-22"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-21"
+   "fetched_at": "2026-10-22"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-21"
+   "fetched_at": "2026-10-22"
   }
  ],
  "terms": [
