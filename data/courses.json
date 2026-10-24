@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-23",
+ "generated_at": "2026-10-24",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
    "verified_at": "2026-10-22",
-   "fetched_at": "2026-10-23"
+   "fetched_at": "2026-10-24"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-23"
+   "fetched_at": "2026-10-24"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-23"
+   "fetched_at": "2026-10-24"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-23"
+   "fetched_at": "2026-10-24"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-10-19",
-   "fetched_at": "2026-10-23"
+   "fetched_at": "2026-10-24"
   }
  ],
  "terms": [
@@ -15100,6 +15100,45 @@
    "concentrations": [],
    "tags": [],
    "description": "This is the Seminar portion of the Juvenile Defenders Clinic."
+  },
+  {
+   "id": "2027SP-8022-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "8022",
+   "section": "8022-1",
+   "title": "Knowledge Technology for Factual Analysis",
+   "credits": 3.0,
+   "delivery": "In-Person",
+   "division": "Day",
+   "meetings": [
+    {
+     "day": "Mon",
+     "start": "16:00",
+     "end": "17:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Marc Lauritsen"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": true,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [],
+   "concentrations": [
+    "Legal Innovation and Technology"
+   ],
+   "tags": [
+    "Law - Race, Equity and Law"
+   ],
+   "description": "This course examines how AI and other technologies can help analyze factual controversies by organizing evidence and arguments. You’ll do hands-on work with methods like Wigmore diagrams and argument maps. We'll critically explore them in the context of questions such as who in fact authored the works of Shakespeare. And read a few plays. (That author was remarkably progressive for the time on the roles and rights of women and people of color, and on the relationships among religion, government, and society. The works frequently allude to legal concepts and processes. Mark Twain was convinced he must have been a practicing lawyer.) This is a three credit course. It can be counted toward the experiential learning course requirement, as an elective for the Legal Innovation & Technology Concentration, and as one in satisfaction of the Race, Equity, and Law (REAL) requirement. Students are expected to spend an average of eight hours a week outside of class preparing for discussion and working on projects."
   },
   {
    "id": "2027SP-2421-1",
