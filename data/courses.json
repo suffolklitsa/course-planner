@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-26",
+ "generated_at": "2026-10-27",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-26"
+   "fetched_at": "2026-10-27"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-26"
+   "fetched_at": "2026-10-27"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-26"
+   "fetched_at": "2026-10-27"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-26"
+   "fetched_at": "2026-10-27"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-26"
+   "fetched_at": "2026-10-27"
   }
  ],
  "terms": [
@@ -14774,7 +14774,7 @@
    "prerequisites": "",
    "requirements": {
     "experiential": false,
-    "writing": true,
+    "writing": false,
     "ma_bar": false,
     "first_year": false,
     "clinic_or_internship": false
@@ -14786,7 +14786,9 @@
     }
    ],
    "concentrations": [
-    "Intellectual Property Law"
+    "Business Law and Financial Services",
+    "Intellectual Property Law",
+    "International Law"
    ],
    "tags": [],
    "description": "\"Free trade\" is a topic very much in the news these days. International free trade is built on specific global laws that will be covered in detail in this course. In particular, we will examine all the basic legal elements of the global trading system, focusing on the main legal texts of the World Trade Organization (WTO). The course objective is to attain a broad understanding of global and regional trade agreements and the major trade disputes that have arisen under these. The course will trace the development of international trade law from the General Agreement on Tariffs and Trade (GATT), through the Uruguay Round Agreements of the 1990s, leading to the formation of the WTO. Subject matter areas will include the main principles of non-discrimination in trade, as well as trade-related aspects of intellectual property, trade in services, anti-dumping laws, regional trade agreements, trade and the environment, and many other topics of contemporary interest."
