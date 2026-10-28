@@ -28,6 +28,7 @@
     font-weight: 700;
   }
   header.top a { text-decoration: none; }
+  header.top nav, header.top details { display: none !important; }
   header.top > * + * { margin-left: 0.4em; }
 
   main, .workspace { display: block !important; max-width: none; margin: 0; padding: 0; }
