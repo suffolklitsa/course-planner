@@ -6,10 +6,30 @@ dist/ is what the club site copies to suffolklitsa.org/planner. For local use:
 """
 from __future__ import annotations
 
+import hashlib
+import re
 import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def version_assets(dist: Path) -> None:
+    """Add ?v=<content hash> to the stylesheets and script in index.html.
+
+    The site serves these files with a four-hour browser cache, so without a version a visitor
+    can get a new page with last release's CSS (a new header showing as bare links, for example).
+    """
+    index = dist / "index.html"
+    html = index.read_text(encoding="utf-8")
+
+    def stamp(match: re.Match) -> str:
+        attr, name = match.group(1), match.group(2)
+        digest = hashlib.sha256((dist / name).read_bytes()).hexdigest()[:10]
+        return f'{attr}="{name}?v={digest}"'
+
+    html = re.sub(r'(href|src)="([a-z]+\.(?:css|js))"', stamp, html)
+    index.write_text(html, encoding="utf-8")
 
 
 def main() -> int:
@@ -26,6 +46,7 @@ def main() -> int:
             print(f"skipped {exams.name}: some exams have no date yet")
             continue
         shutil.copy2(exams, dist / exams.name)
+    version_assets(dist)
     print(f"built {dist}")
     return 0
 
