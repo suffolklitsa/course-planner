@@ -9978,56 +9978,6 @@
    "description": "This is the Seminar portion of the Accelerator Practice."
   },
   {
-   "id": "2027SP-2005-1",
-   "term": "Spring 2027",
-   "term_code": "2027SP",
-   "course_number": "2005",
-   "section": "2005-1",
-   "title": "Accounting for Lawyers",
-   "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Evening",
-   "meetings": [
-    {
-     "day": "Thu",
-     "start": "20:00",
-     "end": "21:50"
-    }
-   ],
-   "start_date": "2027-01-19",
-   "end_date": "2027-05-14",
-   "instructors": [],
-   "prerequisites": "",
-   "requirements": {
-    "experiential": false,
-    "writing": false,
-    "ma_bar": false,
-    "first_year": false,
-    "clinic_or_internship": false
-   },
-   "areas_of_focus": [
-    {
-     "name": "Bankruptcy",
-     "level": "recommended"
-    },
-    {
-     "name": "Taxation",
-     "level": "recommended"
-    },
-    {
-     "name": "Corporate Finance and Business",
-     "level": "recommended"
-    }
-   ],
-   "concentrations": [
-    "Business Law and Financial Services"
-   ],
-   "tags": [
-    "Law - Masters of Laws Taxation"
-   ],
-   "description": "Financial Services and other students interested in understanding the issues of accounting, finance, auditing, and financial reporting commonly encountered by attorneys. The course begins with an introduction to the objectives and the mechanics of financial reporting and accounting. In addition to the traditional textual and case materials, we examine in detail the financial statements of a local publicly traded company including the balance sheet, income statement, statement of shareholder's equity, statement of cash flows, footnotes and management disclosure and analysis. We will also perform fundamental comparative financial analysis from an investor's viewpoint on several companies during the course to determine each company's financial strengths and weaknesses. The course also addresses the relationship between lawyer and auditor and reviews and analyzes recent financial reporting and financial scandals and audit failures. There will be a mid-term and final exam, representing 20% and 80% of the course grade, respectively."
-  },
-  {
    "id": "2027SP-2020-2",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -10285,6 +10235,64 @@
    "instructors": [
     "Michael Ilin"
    ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": true,
+    "writing": true,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Personal Injury",
+     "level": "recommended"
+    },
+    {
+     "name": "International",
+     "level": "recommended"
+    },
+    {
+     "name": "Immigration",
+     "level": "recommended"
+    },
+    {
+     "name": "Health and Biomedical",
+     "level": "recommended"
+    },
+    {
+     "name": "Intellectual Property",
+     "level": "recommended"
+    },
+    {
+     "name": "Civil Litigation",
+     "level": "recommended"
+    }
+   ],
+   "concentrations": [],
+   "tags": [],
+   "description": "Courses in Advanced Legal Writing build proficiency in the legal analysis, research and writing skills introduced in the first-year LPS course. In most sections of the course, students will produce writings that simulate the work that lawyers perform in one specific legal context chosen by the professor, such as criminal litigation, appellate practice, intellectual property litigation, or international law. In all sections of the course, students will complete substantial writing assignments or projects under faculty supervision, with multiple opportunities to receive feedback throughout the course. A course that is used for the Legal Writing Requirement may not also be used to satisfy the Experiential Learning requirement."
+  },
+  {
+   "id": "2027SP-2265-3",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2265",
+   "section": "2265-3",
+   "title": "Advanced Legal Writing",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Wed",
+     "start": "18:00",
+     "end": "19:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [],
    "prerequisites": "",
    "requirements": {
     "experiential": true,
@@ -17319,7 +17327,9 @@
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
-   "instructors": [],
+   "instructors": [
+    "Kelly Vieira"
+   ],
    "prerequisites": "",
    "requirements": {
     "experiential": true,
@@ -19927,14 +19937,16 @@
    "division": "Evening",
    "meetings": [
     {
-     "day": "Wed",
-     "start": "20:00",
-     "end": "21:50"
+     "day": "Tue",
+     "start": "18:00",
+     "end": "19:50"
     }
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
-   "instructors": [],
+   "instructors": [
+    "Elizabeth Stillman"
+   ],
    "prerequisites": "LAW Program of Study LLM Law Programs",
    "requirements": {
     "experiential": false,
