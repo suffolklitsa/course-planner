@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-28",
+ "generated_at": "2026-10-29",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-28"
+   "fetched_at": "2026-10-29"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-28"
+   "fetched_at": "2026-10-29"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-28"
+   "fetched_at": "2026-10-29"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-28"
+   "fetched_at": "2026-10-29"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-28"
+   "fetched_at": "2026-10-29"
   }
  ],
  "terms": [
@@ -14254,6 +14254,43 @@
    "description": "A study of the immigration, nationality, and naturalization laws of the United States. The topics discussed are: the constitutional bases of the immigration power; the immigrant selection system; grounds for admissibility of aliens; grounds for removal; change of status within the United States, including refugee and asylum status; review of immigration decisions through administrative procedures, appeals, and the courts; citizenship by birth and by naturalization; revocation of naturalization and expatriation; employer penalties for hiring illegal aliens; and benefits available to aliens. Prof. Shah requires a take home exam."
   },
   {
+   "id": "2027SP-8087-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "8087",
+   "section": "8087-1",
+   "title": "In House Counsel Immersion",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Day",
+   "meetings": [
+    {
+     "day": "Mon",
+     "start": "16:00",
+     "end": "17:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "William Gabovitch"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": true,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [],
+   "concentrations": [
+    "Business Law and Financial Services"
+   ],
+   "tags": [],
+   "description": "Success as in-house counsel requires specialized knowledge and skills paired with a deep understanding of organizational culture, risk appetite, and business objectives. This 2-credit experiential course builds the foundational knowledge and essential skills needed to thrive as counsel within corporations, universities, hospitals and non-profits. Students will be assigned to work within a fictional company throughout the semester, placing them in the role of in-house counsel. Students will be asked to respond to industry-specific challenges, address compliance issues, handle ethical dilemmas, engage in risk management, and develop corporate legal trainings. Throughout, students will learn to provide sound, industry-specific legal counsel that aligns with business goals. Students enrolled in this course who seek additional hands-on experience may but are not required to apply for a limited number of exclusive in-house counsel externship placements at local companies, secured by the Professor. Students selected for these placements can earn an additional 2-5 ungraded, experiential credits. Students interested in this additional opportunity should contact the Professor. This course will serve as the externship seminar for these placements, so students do not need to enroll in the other externship seminars."
+  },
+  {
    "id": "2027SP-8085-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -14805,9 +14842,9 @@
    "term_code": "2027SP",
    "course_number": "2225",
    "section": "2225-2",
-   "title": "Interviewing and Counseling",
+   "title": "Interviewing and Counseling WEB",
    "credits": 2.0,
-   "delivery": "In-Person",
+   "delivery": "Online Synchronous",
    "division": "Evening",
    "meetings": [
     {
@@ -14818,7 +14855,9 @@
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
-   "instructors": [],
+   "instructors": [
+    "Kate Gannon"
+   ],
    "prerequisites": "",
    "requirements": {
     "experiential": true,
@@ -17477,6 +17516,88 @@
    "description": "Negotiation is a key skill that all practicing lawyers must have. This course teaches the theory and practice of negotiation in a legal context. Class time will focus on practice in simulations and role-plays, discussion of issues and problems raised by class exercises, analysis of videos, and brief lectures by the professor. Written assignments and grading policies may vary by section. Also available as an Intersession Course."
   },
   {
+   "id": "2027SP-2283-9",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2283",
+   "section": "2283-9",
+   "title": "Negotiation",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Day",
+   "meetings": [
+    {
+     "day": "Mon",
+     "start": "12:00",
+     "end": "13:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": true,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Personal Injury",
+     "level": "recommended"
+    },
+    {
+     "name": "Public Service",
+     "level": "recommended"
+    },
+    {
+     "name": "Bankruptcy",
+     "level": "recommended"
+    },
+    {
+     "name": "Environmental and Energy",
+     "level": "recommended"
+    },
+    {
+     "name": "Real Estate and Land Use",
+     "level": "recommended"
+    },
+    {
+     "name": "Health and Biomedical",
+     "level": "recommended"
+    },
+    {
+     "name": "Labor and Employment",
+     "level": "recommended"
+    },
+    {
+     "name": "Juvenile and Family",
+     "level": "recommended"
+    },
+    {
+     "name": "Civil Litigation",
+     "level": "core"
+    },
+    {
+     "name": "Dispute Resolution",
+     "level": "core"
+    },
+    {
+     "name": "Corporate Finance and Business",
+     "level": "recommended"
+    }
+   ],
+   "concentrations": [
+    "Business Law and Financial Services",
+    "Trial and Appellate Advocacy",
+    "Health and Biomedical"
+   ],
+   "tags": [],
+   "description": "Negotiation is a key skill that all practicing lawyers must have. This course teaches the theory and practice of negotiation in a legal context. Class time will focus on practice in simulations and role-plays, discussion of issues and problems raised by class exercises, analysis of videos, and brief lectures by the professor. Written assignments and grading policies may vary by section. Also available as an Intersession Course."
+  },
+  {
    "id": "2027SP-2283-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -18766,6 +18887,39 @@
    "description": "The Prosecutors Program provides students with the opportunity prosecute cases for a District Attorney's Office in a district or municipal court in the Commonwealth of Massachusetts for a full year. Students perform all the tasks of an Assistant District Attorney and bear the responsibilities of representing the government in criminal proceedings. These tasks may include: Arraignments and first appearance hearings Pretrial conferences Plea negotiations and hearings Interviewing and preparing witnesses Pretrial motions (including motions to suppress and dismiss) Bench and jury trials Sentencing hearings Post-conviction motions A student prosecutor's responsibilities may include: Complying with stringent ethical rules particular to prosecutors (See Mass. R. Prof. R. 3.8) Diligently procuring and expediently providing all discovery Thoroughly investigating cases Using known facts to screen for probable cause and appropriate charge(s) Conducting in-depth legal research Writing motions, oppositions to motions, informative memoranda Preparing for motion hearings and trials Formulating sentencing recommendations (and more) In addition to in court work, students will learn about the procedures and law they will use to perform their work through weekly classes, where Associate Professor Christina Miller works with students to not only teach substantive rules and procedures, but also provides experiential learning opportunities through mock exercises, written assignments, and in-class group work. The classroom discussions, exercises, and simulations focus on criminal procedure, courtroom advocacy, prosecutorial ethics, case preparation, and the exercise of discretion by prosecutors. Students use reflective and skill development journals and case assessment assignments to further their experiential learning. Students are in court one full day per week in the fall semester and two full days per week in the spring semester. The in-court time is in addition to time required for class preparation and assignments. Classes are held on Wednesday. A student may not work in court on that day. Students are also expected to attend two full-day orientations. The All-Clinic Orientation occurring in August (before the first day of classes) and a Prosecutor Program Orientation occurring on a Saturday in September. Credits & Grades: The Prosecutors Program is offered for 10 credits during a student's 3L year. Four of the ten credits are earned through classroom work, for which the student will receive a letter grade at the end of the year. The remaining six credits are earned through in-court work, for which the student will receive a \"credit/no credit\" grade. Qualifications & Prerequisites: A student must be in their final year of school and qualify for certification pursuant to the Supreme Judicial Court's Student Practice Rule 3:03 (see https://www.mass.gov/guides/student-practitioners for more information). Evidence is a prerequisite for all students. A trial practice course or the equivalent (i.e. Trial Team or similar experience) may be given preference or students may take trial practice in the Summer or concurrently in the Fall semester. Accelerated JD students may take evidence or trial practice concurrently with the Prosecutors Program in the fall semester. Day and Evening students who represent on their application that they intend to take Trial Advocacy in the summer or concurrently with the fall semester of their third year will be considered after others who have completed all prerequisites. Restrictions: Students are not allowed to engage in employment where they handle criminal or juvenile defense matters during the academic year in which they are in the clinic. Students are screened for conflicts if they have any outside, legal employment Students are subject to a criminal background check. While it may not prohibit a student from participating, early determination of inclusion or exclusion is required. If there is anything in a student's background that would appear in a criminal background check, please speak with Associate Professor Christina Miller during the application period."
   },
   {
+   "id": "2027SP-8021-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "8021",
+   "section": "8021-1",
+   "title": "Superintelligent AI and the New Social Contract WEB",
+   "credits": 2.0,
+   "delivery": "Online Synchronous",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Tue",
+     "start": "18:00",
+     "end": "19:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [],
+   "concentrations": [],
+   "tags": [],
+   "description": "This course will explore the legal, ethical, and societal questions raised by increasingly advanced artificial intelligence. Drawing on Of Another Mind: Navigating a New Social Contract with Superintelligent AI by Professors Katherine B. Forrest and Amy C. Zimmerman, students will develop a foundational understanding of generative AI, autonomous AI agents, and the potential emergence of superintelligence and will examine how these developments may reshape legal frameworks and relationships among individuals, institutions, and AI systems. Through a combination of lectures, class discussions, guest speakers, and practical exercises, students will consider topics such as accountability for AI decisions, the alignment of AI behavior with human values, debates about AI consciousness and legal personhood, and the role of law in protecting human autonomy and promoting public trust. The objective of the course is to equip students to assess emerging AI developments critically and contribute to the legal and policy choices that will shape society’s relationship with increasingly capable AI."
+  },
+  {
    "id": "2027SP-0233-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -19887,7 +20041,7 @@
    "term_code": "2027SP",
    "course_number": "2970",
    "section": "2970-1",
-   "title": "Twenty-First Century Legal Profession",
+   "title": "Twenty-First Century Legal Profession WEB",
    "credits": 2.0,
    "delivery": "Online Synchronous",
    "division": "Day",
