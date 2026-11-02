@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-29",
+ "generated_at": "2026-11-02",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
-   "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-29"
+   "verified_at": "2026-11-02",
+   "fetched_at": "2026-11-02"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
-   "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-29"
+   "verified_at": "2026-11-02",
+   "fetched_at": "2026-11-02"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
-   "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-29"
+   "verified_at": "2026-11-02",
+   "fetched_at": "2026-11-02"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
-   "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-29"
+   "verified_at": "2026-11-02",
+   "fetched_at": "2026-11-02"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
-   "verified_at": "2026-10-26",
-   "fetched_at": "2026-10-29"
+   "verified_at": "2026-11-02",
+   "fetched_at": "2026-11-02"
   }
  ],
  "terms": [
@@ -10119,7 +10119,7 @@
    "instructors": [
     "Ragini Shah"
    ],
-   "prerequisites": "",
+   "prerequisites": "Law 2218",
    "requirements": {
     "experiential": false,
     "writing": true,
@@ -10141,7 +10141,7 @@
    "tags": [
     "Law - Race, Equity and Law"
    ],
-   "description": "This course will cover the intersection of criminal and immigration law, known in the field as \"crimimmigration.\" Students will first be introduced to the crimimmigration system which includes the ways in which criminal convictions impact a person's ability to obtain immigration status or defend against deportation and criminal laws that penalize immigration violations. Because the legal framework is quite complex, the Immigration Law course is a prerequisite. Familiarity with immigration terminology and the grounds of Inadmissibility/deportability are a must for succeeding in this course. Students may seek a waiver of the prerequisite if they have experience in crimmigraiton practice.. To discuss the waiver, please contact Professor Shah. After the introductory material, the class will explore perspectives from government officials, scholars and practitioners on what crimimmigration is, the need for the system and critiques of the system. Students will be asked to consider how this system of interlocking methods of detention and penalties developed, what political and legal theories underpin the system and whether there are alternatives that could be explored. The readings for the course will draw mostly from scholarly articles, book chapters, media pieces and opinion pieces with some case law to ground our discussion. Enrollment in the course is limited to 16. Assessment will be based on class participation (15%) and either a final paper for those completing the Legal Writing Requirement (85%) or a midterm (15%) and final exam (60%) for all others."
+   "description": "This course will cover the intersection of criminal and immigration law, known in the field as \"crimimmigration.\" Students will first be introduced to the crimimmigration system which includes the ways in which criminal convictions impact a person's ability to obtain immigration status or defend against deportation and criminal laws that penalize immigration violations. Because the legal framework is quite complex, the Immigration Law course is a prerequisite. Familiarity with immigration terminology and the grounds of Inadmissibility/deportability are a must for succeeding in this course. Students may seek a waiver of the prerequisite if they have experience in crimmigraiton practice.. To discuss the waiver, please contact Professor Shah. After the introductory material, the class will explore perspectives from government officials, scholars and practitioners on what crimimmigration is, the need for the system and critiques of the system. Students will be asked to consider how this system of interlocking methods of detention and penalties developed, what political and legal theories underpin the system and whether there are alternatives that could be explored. The readings for the course will draw mostly from scholarly articles, book chapters, media pieces and opinion pieces with some case law to ground our discussion. Enrollment in the course is limited to 20. Assessment will be based on class participation (15%) and either a final paper for those completing the Legal Writing Requirement (85%) or a midterm (15%) and final exam (60%) for all others."
   },
   {
    "id": "2027SP-2182-1",
@@ -14893,46 +14893,6 @@
    "description": "This course is designed to raise the student's level of awareness of the interaction between the lawyer and client and train the student in the preventive law and counseling functions of law practice. Among topics included are: the initial interview active and passive listening, the reluctant client, decision making, lawyer and client, who's in charge, and selected ethical considerations. Techniques will include extensive role-playing by each student, student observation, and critique by the students and the instructor."
   },
   {
-   "id": "2027SP-2091-1",
-   "term": "Spring 2027",
-   "term_code": "2027SP",
-   "course_number": "2091",
-   "section": "2091-1",
-   "title": "Introduction to Construction Law",
-   "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Day",
-   "meetings": [
-    {
-     "day": "Tue",
-     "start": "16:00",
-     "end": "17:50"
-    }
-   ],
-   "start_date": "2027-01-19",
-   "end_date": "2027-05-14",
-   "instructors": [
-    "John Tangney"
-   ],
-   "prerequisites": "",
-   "requirements": {
-    "experiential": false,
-    "writing": false,
-    "ma_bar": false,
-    "first_year": false,
-    "clinic_or_internship": false
-   },
-   "areas_of_focus": [
-    {
-     "name": "Real Estate and Land Use",
-     "level": "core"
-    }
-   ],
-   "concentrations": [],
-   "tags": [],
-   "description": "The course will focus on understanding traditional components of construction law against the backdrop of a construction project from inception through completion, touching upon common industry legal issues including contracts, safety, risk, disputes and regulatory enforcement, among others.  The class will explore various areas of how the law impacts a project and all the parties involved. The class will also have the opportunity to learn from industry expert guest lecturers and visit two large project job sites in Boston for real life exposure to the challenges of vertical building.  2 credits"
-  },
-  {
    "id": "2027SP-2942-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -15282,7 +15242,7 @@
    "prerequisites": "",
    "requirements": {
     "experiential": false,
-    "writing": false,
+    "writing": true,
     "ma_bar": false,
     "first_year": false,
     "clinic_or_internship": false
