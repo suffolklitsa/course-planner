@@ -18459,8 +18459,8 @@
    "meetings": [
     {
      "day": "Tue",
-     "start": "18:00",
-     "end": "18:55"
+     "start": "20:00",
+     "end": "20:55"
     }
    ],
    "start_date": "2027-01-19",
@@ -20152,6 +20152,50 @@
    "concentrations": [],
    "tags": [],
    "description": "This course provides a basic introduction to the management and transfer of private wealth through the use of Wills, Intestate Statutes, Trusts and Powers of Appointment. Consideration will be given to the theoretical and practical relationships among them. As such, the course is a combination of the two credit course in Estates and the two credit course in Trusts. A more detailed description of the actual course content may be found in the course description for those courses."
+  },
+  {
+   "id": "2027SP-2970-2",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2970",
+   "section": "2970-2",
+   "title": "Twenty-First Century Legal Profession",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Tue",
+     "start": "18:00",
+     "end": "19:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Kelli Proia"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": true,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Personal Injury",
+     "level": "recommended"
+    }
+   ],
+   "concentrations": [
+    "Legal Innovation and Technology"
+   ],
+   "tags": [
+    "Law - Legal Technology and Innovation Core"
+   ],
+   "description": "This course provides students with key business and professional information regarding the operation of a sustainable law practice in the emerging new legal market. Students will learn to generate creative legal business solutions. Topics include: building a low-cost law practice; providing exemplary client service; setting market prices for legal work; marketing a law practice; and crafting an online presence for your law firm. Students will be expected to work both in groups and individually, as well as to make class presentations."
   },
   {
    "id": "2027SP-2970-1",
