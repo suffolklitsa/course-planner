@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-02",
+ "generated_at": "2026-11-03",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-02"
+   "fetched_at": "2026-11-03"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-02"
+   "fetched_at": "2026-11-03"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-02"
+   "fetched_at": "2026-11-03"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-02"
+   "fetched_at": "2026-11-03"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-02"
+   "fetched_at": "2026-11-03"
   }
  ],
  "terms": [
@@ -10292,7 +10292,9 @@
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
-   "instructors": [],
+   "instructors": [
+    "Michael Ilin"
+   ],
    "prerequisites": "",
    "requirements": {
     "experiential": true,
@@ -13105,6 +13107,59 @@
    "description": "Examines the legal and policy issues surrounding the rapidly developing areas of environmental law-air and water pollution, energy development/conservation-with a special emphasis on the law of toxic and hazardous waste control. This course refines and applies a combination of skills acquired in the first-year curriculum. Through in-class simulations based on real-world environmental law controversies, the course prepares students to practice as corporate counsel, prosecuting attorneys, public interest attorneys or government counsel in this burgeoning area of the law. Students using this course to fulfill the experiential learning requirement may not also use this same course to meet the legal writing requirement and vice versa."
   },
   {
+   "id": "2027SP-2165-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2165",
+   "section": "2165-1",
+   "title": "Estate and Gift Taxation HYB",
+   "credits": 3.0,
+   "delivery": "Hybrid",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Mon",
+     "start": "18:00",
+     "end": "19:25"
+    },
+    {
+     "day": "Wed",
+     "start": "18:00",
+     "end": "19:25"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Real Estate and Land Use",
+     "level": "recommended"
+    },
+    {
+     "name": "Taxation",
+     "level": "core"
+    },
+    {
+     "name": "Corporate Finance and Business",
+     "level": "recommended"
+    }
+   ],
+   "concentrations": [],
+   "tags": [
+    "Law - Masters of Laws Taxation"
+   ],
+   "description": "This course will introduce the fundamentals of the federal tax on the transfer of wealth by gift, devise, bequest, and inheritance, including the historical and policy perspectives, the interaction between the estate and gift tax, current and changing aspects of the law, and the application of the transfer tax in practice. The course will review the rules for taxing various transfers of property, including the implications of owning property as joint tenants, transfers to trust involving interests and powers retained by the transferor, the treatment of life insurance proceeds, the effects of holding general and special powers of appointment, and certain transfers made within three years of death. Students will learn about deductions allowed in determining the amount of transfers subject to estate tax, particularly the marital deduction. The course will analyze valuation of property issues, including recent case law relating to securing valuation discounts for transfers of interests in family limited partnerships."
+  },
+  {
    "id": "2027SP-2166-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -13624,6 +13679,69 @@
    "end_date": "2027-05-14",
    "instructors": [
     "Anthony Polito"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Taxation",
+     "level": "core"
+    },
+    {
+     "name": "Health and Biomedical",
+     "level": "recommended"
+    },
+    {
+     "name": "Bankruptcy",
+     "level": "recommended"
+    },
+    {
+     "name": "Labor and Employment",
+     "level": "recommended"
+    },
+    {
+     "name": "Corporate Finance and Business",
+     "level": "core"
+    }
+   ],
+   "concentrations": [],
+   "tags": [
+    "Law - Accelerated to Practice Electives"
+   ],
+   "description": "This course is an introduction to the federal income tax system. Topics include items of inclusion and exclusion from gross income, deductions from gross income, capital gains and losses, basic tax accounting, and the identification of income to the appropriate taxpayer. The course will give consideration to the private attorney's role in administering the tax law and in advising clients on the interaction of the tax law with their businesses, investments, and personal activities."
+  },
+  {
+   "id": "2027SP-2200-2",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2200",
+   "section": "2200-2",
+   "title": "Federal Income Taxation WEB",
+   "credits": 4.0,
+   "delivery": "Online Synchronous",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Tue",
+     "start": "20:00",
+     "end": "21:50"
+    },
+    {
+     "day": "Thu",
+     "start": "20:00",
+     "end": "21:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Meredith Conway"
    ],
    "prerequisites": "",
    "requirements": {
@@ -18294,7 +18412,7 @@
    "term_code": "2027SP",
    "course_number": "2315",
    "section": "2315-4",
-   "title": "Professional Responsibility HJD",
+   "title": "Professional Responsibility WEB",
    "credits": 3.0,
    "delivery": "Online Synchronous",
    "division": "Evening",
@@ -18327,6 +18445,46 @@
    "concentrations": [],
    "tags": [],
    "description": "Together we will learn more about your obligations and responsibilities as an attorney, start to prepare you for the Multistate Professional Responsibility Examination (MPRE), and reflect on your values and how they might inform your professional identity and career choices. Topics covered include: admission to practice, lawyer discipline, peer regulation, lawyer-client relationship, withdrawal, fees, confidentiality, conflict of interest, competence and diligence, role of lawyer as advisor, preservation of client's funds and property, advertising and solicitation, unrepresented persons and public service. Students are expected to actively participate in the class discussion. The Model Rules of Professional Conduct will be the primary source, but course readings also include articles, podcasts, videos, and case law. Grading will be determined by a midterm, final, regular quizzes assignments, and class participation. NOTE ABOUT HJD CLASSES: The class meets online synchronously only once a week; because it is a 3-credit class, you should expect to do a significant amount of work on your own, outside of class ."
+  },
+  {
+   "id": "2027SP-2315-5",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2315",
+   "section": "2315-5",
+   "title": "Professional Responsibility WEB",
+   "credits": 3.0,
+   "delivery": "Online Synchronous",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Tue",
+     "start": "18:00",
+     "end": "18:55"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Sarah Schendel"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": true,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Criminal",
+     "level": "core"
+    }
+   ],
+   "concentrations": [],
+   "tags": [],
+   "description": "Together we will: (1) learn more about your ethical obligations and responsibilities as an attorney; (2) begin to prepare you for the MPRE; (3) discuss current events in legal ethics, and (4) think about your values and how they might inform your professional identity and career choices. Topics include: power of courts over the legal profession, admission to practice, lawyer discipline, lawyer-client relationship, selection of clients, withdrawal, fees, confidentiality, conflict of interest, competence and diligence, role of lawyer as advisor, advertising and solicitation. Students are expected to actively participate in the class discussion. The Model Rules of Professional Conduct will be the primary source. Course grade will be based on a midterm, final exam, and activities throughout the semester. This course is HYBRID, meaning you will be required to do a substantial amount of work on your own outside of class (quizzes, CALI and BarBri lessons, videos, reading, pre-recorded lectures, etc).This format works best for well-organized and self-directed students ."
   },
   {
    "id": "2027SP-102-2",
