@@ -15263,7 +15263,8 @@
     "Legal Innovation and Technology"
    ],
    "tags": [
-    "Law - Race, Equity and Law"
+    "Law - Race, Equity and Law",
+    "Law - LLMI Program"
    ],
    "description": "This course examines how AI and other technologies can help analyze factual controversies by organizing evidence and arguments. You’ll do hands-on work with methods like Wigmore diagrams and argument maps. We'll critically explore them in the context of questions such as who in fact authored the works of Shakespeare. And read a few plays. (That author was remarkably progressive for the time on the roles and rights of women and people of color, and on the relationships among religion, government, and society. The works frequently allude to legal concepts and processes. Mark Twain was convinced he must have been a practicing lawyer.) This is a three credit course. It can be counted toward the experiential learning course requirement, as an elective for the Legal Innovation & Technology Concentration, and as one in satisfaction of the Race, Equity, and Law (REAL) requirement. Students are expected to spend an average of eight hours a week outside of class preparing for discussion and working on projects."
   },
@@ -15462,7 +15463,9 @@
    },
    "areas_of_focus": [],
    "concentrations": [],
-   "tags": [],
+   "tags": [
+    "Law - Race, Equity and Law"
+   ],
    "description": "Students will learn how to deploy a range of legal advocacy methods to achieve civil rights and civil liberties law reform. Using real-world case studies, students will engage in hands-on learning to design law reform campaigns that integrate litigation, legislation, ballot initiatives, field mobilization, and communications strategies to advance social justice law reform."
   },
   {
@@ -19091,8 +19094,12 @@
     "clinic_or_internship": false
    },
    "areas_of_focus": [],
-   "concentrations": [],
-   "tags": [],
+   "concentrations": [
+    "Legal Innovation and Technology"
+   ],
+   "tags": [
+    "Law - LLMI Program"
+   ],
    "description": "This course will explore the legal, ethical, and societal questions raised by increasingly advanced artificial intelligence. Drawing on Of Another Mind: Navigating a New Social Contract with Superintelligent AI by Professors Katherine B. Forrest and Amy C. Zimmerman, students will develop a foundational understanding of generative AI, autonomous AI agents, and the potential emergence of superintelligence and will examine how these developments may reshape legal frameworks and relationships among individuals, institutions, and AI systems. Through a combination of lectures, class discussions, guest speakers, and practical exercises, students will consider topics such as accountability for AI decisions, the alignment of AI behavior with human values, debates about AI consciousness and legal personhood, and the role of law in protecting human autonomy and promoting public trust. The objective of the course is to equip students to assess emerging AI developments critically and contribute to the legal and policy choices that will shape society’s relationship with increasingly capable AI."
   },
   {
