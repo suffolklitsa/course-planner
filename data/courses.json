@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-04",
+ "generated_at": "2026-11-05",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-04"
+   "fetched_at": "2026-11-05"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-04"
+   "fetched_at": "2026-11-05"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-04"
+   "fetched_at": "2026-11-05"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-04"
+   "fetched_at": "2026-11-05"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-04"
+   "fetched_at": "2026-11-05"
   }
  ],
  "terms": [
@@ -15114,43 +15114,6 @@
    "description": "This course provides an introduction to Islamic law and Islamic legal history. A central aim is to provide students with sufficient background in the classical conception of law and the institutional context within which it formed so as to appreciate the radical transformations that Islamic law has undergone in the modern era. Attention will be given to the sources of jurisprudence, the emergence of differing \"schools\" of law, sectarian differences (e.g. Sunni and Shi'ite), and the fundamental changes that occurred during the transition to modernity, when nation states emerged throughout the Muslim world. Various domains of the positive law will be surveyed, including family law, criminal law, constitutional law, commercial law (including modern Islamic finance), and the laws governing international relations. Comparisons and contrasts will be made, as appropriate, to parallel concepts and phenomena within Roman as well as Anglo-American law. Paper required"
   },
   {
-   "id": "2027SP-2284-1",
-   "term": "Spring 2027",
-   "term_code": "2027SP",
-   "course_number": "2284",
-   "section": "2284-1",
-   "title": "Judicial Clerkship Seminar",
-   "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Day",
-   "meetings": [
-    {
-     "day": "Mon",
-     "start": "16:00",
-     "end": "17:50"
-    }
-   ],
-   "start_date": "2027-01-19",
-   "end_date": "2027-05-14",
-   "instructors": [
-    "Meredith Shih"
-   ],
-   "prerequisites": "",
-   "requirements": {
-    "experiential": true,
-    "writing": false,
-    "ma_bar": false,
-    "first_year": false,
-    "clinic_or_internship": false
-   },
-   "areas_of_focus": [],
-   "concentrations": [
-    "Trial and Appellate Advocacy"
-   ],
-   "tags": [],
-   "description": "This course is ideal for students who wish to hone their writing skills, as well as prepare or market themselves for a concurrent or future judicial internship, externship, or clerkship. This course is available to all students and is required for students enrolling in a judicial externship. The two credits granted for this course are experiential credits and are in addition to and independent of any externship credits awarded for the field placement experience. This experiential seminar will engage students in judicial writing practice and discussion of the unique ethical and legal responsibilities of working as an attorney in judicial organizations. This course will also provide education in bias, cultural competency, antiracism and professional identity formation. Externship experiences may also be discussed in class. Experienced guest speakers will provide insight into their experiences working for the judiciary and their prior or subsequent career paths. Readings, in-class exercises, and class participation are essential components of the course. Regular journal entries will be required. The course will not satisfy the writing requirement. The course will be graded on a H/P/LP/F basis. If a student in judicial externship placement is unable to take this course, or has taken it in the past, the student may request a waiver from the Director of Externship Programs and may be supervised individually. Students who have questions about the externship component of the course should contact the Director of Externship Programs, Mary Sawicki ( msawiski@suffolk.edu )."
-  },
-  {
    "id": "2027SP-2147-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -18224,76 +18187,6 @@
    "description": "Practicing positive leadership in challenging times involves understanding the strengths and preferences that we bring to a leadership role, those aspects we admire in others that we want to develop or inspire us, and what specific virtues – like honesty, courage, or compassion - or a combination of them - may be most appropriate to draw upon when providing leadership for specific people or situations. This course will examine these dimensions of practicing positive leadership by asking students to understand who they are, who they aspire to become, and how they can act in exceptional ways that may lead others to do the same, from events that can be planned for to emergencies without time for planning. The course will be graded honors/pass/fail based upon course participation; successful completion of assignments, including journals, assessments, exercises, simulations and presentations; and a short final reflective paper about what has been learned, citing prior work in the course. Two-credits/Professor Baker"
   },
   {
-   "id": "2027SP-4006-1",
-   "term": "Spring 2027",
-   "term_code": "2027SP",
-   "course_number": "4006",
-   "section": "4006-1",
-   "title": "Private Sector Externship Seminar",
-   "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Evening",
-   "meetings": [
-    {
-     "day": "Tue",
-     "start": "18:00",
-     "end": "19:50"
-    }
-   ],
-   "start_date": "2027-01-19",
-   "end_date": "2027-05-14",
-   "instructors": [
-    "Jordan Bowne"
-   ],
-   "prerequisites": "",
-   "requirements": {
-    "experiential": false,
-    "writing": false,
-    "ma_bar": false,
-    "first_year": false,
-    "clinic_or_internship": false
-   },
-   "areas_of_focus": [],
-   "concentrations": [],
-   "tags": [],
-   "description": "This course is available to all students registered for a private sector legal externship (e.g., solo practitioner, private firm, corporate placements). The two credits granted for this course are in addition to and independent of any credits awarded for the field placement experience. This classroom component will cover topics including the unique ethical and legal responsibilities of working as an attorney in the private sector. This course will provide education in bias, cultural competency, racism and professional identity formation. Externship experiences will also be discussed in class. Experienced private sector   attorneys as guest speakers will provide insight into their career paths and current private sector legal positions. Students will be expected to complete time logs and narrative reflective journals as part of their externship responsibilities. Readings and class participation are essential components of the course. An in-class oral presentation on a topic related to the student's fieldwork experience is required. An extended journal entry on an ethical issue is required. The paper will not satisfy the writing requirement. Student work is graded on a H/P/LP/F basis."
-  },
-  {
-   "id": "2027SP-4006-2",
-   "term": "Spring 2027",
-   "term_code": "2027SP",
-   "course_number": "4006",
-   "section": "4006-2",
-   "title": "Private Sector Externship Seminar",
-   "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Day",
-   "meetings": [
-    {
-     "day": "Mon",
-     "start": "10:00",
-     "end": "11:50"
-    }
-   ],
-   "start_date": "2027-01-19",
-   "end_date": "2027-05-14",
-   "instructors": [
-    "Kaitlin Brophy"
-   ],
-   "prerequisites": "",
-   "requirements": {
-    "experiential": false,
-    "writing": false,
-    "ma_bar": false,
-    "first_year": false,
-    "clinic_or_internship": false
-   },
-   "areas_of_focus": [],
-   "concentrations": [],
-   "tags": [],
-   "description": "This course is available to all students registered for a private sector legal externship (e.g., solo practitioner, private firm, corporate placements). The two credits granted for this course are in addition to and independent of any credits awarded for the field placement experience. This classroom component will cover topics including the unique ethical and legal responsibilities of working as an attorney in the private sector. This course will provide education in bias, cultural competency, racism and professional identity formation. Externship experiences will also be discussed in class. Experienced private sector   attorneys as guest speakers will provide insight into their career paths and current private sector legal positions. Students will be expected to complete time logs and narrative reflective journals as part of their externship responsibilities. Readings and class participation are essential components of the course. An in-class oral presentation on a topic related to the student's fieldwork experience is required. An extended journal entry on an ethical issue is required. The paper will not satisfy the writing requirement. Student work is graded on a H/P/LP/F basis."
-  },
-  {
    "id": "2027SP-2975-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -18666,76 +18559,6 @@
    "concentrations": [],
    "tags": [],
    "description": "A study of the acquisition, ownership, and transfer of property both personal and real, including an analysis of ownership concepts, rights of possession, donative transactions, future interests, concurrent interests, landlord and tenant issues, the conveyancing system and governmental regulations. 08 Apr 2022 1:41 PM"
-  },
-  {
-   "id": "2027SP-4003-1",
-   "term": "Spring 2027",
-   "term_code": "2027SP",
-   "course_number": "4003",
-   "section": "4003-1",
-   "title": "Public Interest Externship Seminar",
-   "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Day",
-   "meetings": [
-    {
-     "day": "Mon",
-     "start": "10:00",
-     "end": "11:50"
-    }
-   ],
-   "start_date": "2027-01-19",
-   "end_date": "2027-05-14",
-   "instructors": [
-    "Reyna Ramirez"
-   ],
-   "prerequisites": "",
-   "requirements": {
-    "experiential": false,
-    "writing": false,
-    "ma_bar": false,
-    "first_year": false,
-    "clinic_or_internship": false
-   },
-   "areas_of_focus": [],
-   "concentrations": [],
-   "tags": [],
-   "description": "This course is available to all students registered for a public interest legal externship (e.g., judicial, non-profit, government, DA, public defender placements). The two credits granted for this course are in addition to and independent of any credits awarded for the field placement experience. This classroom component will cover topics including the unique ethical and legal responsibilities of working as an attorney in non-profit and government organizations. This course will provide education in bias, cultural competency, racism and professional identity formation. Externship experiences will also be discussed in class. Experienced public interest attorneys as guest speakers will provide insight into their career paths and current public interest legal positions. Students will be expected to complete time logs and narrative reflective journals as part of their externship responsibilities. Readings and class participation are essential components of the course. An in-class oral presentation on a topic related to the student's fieldwork experience is required. An extended journal entry on an ethical issue is required. The paper will not satisfy the writing requirement. Student work is graded on a H/P/LP/F basis. If a student in a public interest placement is unable to take the Public Interest Lawyering course, the student may request to be supervised individually by a full-time faculty member only if the student has taken, or is in the process of taking, a substantive course elective with that faculty member that relates to the field placement experience. Decisions about individual faculty supervision will be made by the Externship Director. The faculty member must agree to supervise the student under the guidelines of the Externship Program. 26 Oct 2022 3:02 PM"
-  },
-  {
-   "id": "2027SP-4003-2",
-   "term": "Spring 2027",
-   "term_code": "2027SP",
-   "course_number": "4003",
-   "section": "4003-2",
-   "title": "Public Interest Externship Seminar",
-   "credits": 2.0,
-   "delivery": "In-Person",
-   "division": "Evening",
-   "meetings": [
-    {
-     "day": "Tue",
-     "start": "18:00",
-     "end": "19:50"
-    }
-   ],
-   "start_date": "2027-01-19",
-   "end_date": "2027-05-14",
-   "instructors": [
-    "Julien Mundele"
-   ],
-   "prerequisites": "",
-   "requirements": {
-    "experiential": false,
-    "writing": false,
-    "ma_bar": false,
-    "first_year": false,
-    "clinic_or_internship": false
-   },
-   "areas_of_focus": [],
-   "concentrations": [],
-   "tags": [],
-   "description": "This course is available to all students registered for a public interest legal externship (e.g., judicial, non-profit, government, DA, public defender placements). The two credits granted for this course are in addition to and independent of any credits awarded for the field placement experience. This classroom component will cover topics including the unique ethical and legal responsibilities of working as an attorney in non-profit and government organizations. This course will provide education in bias, cultural competency, racism and professional identity formation. Externship experiences will also be discussed in class. Experienced public interest attorneys as guest speakers will provide insight into their career paths and current public interest legal positions. Students will be expected to complete time logs and narrative reflective journals as part of their externship responsibilities. Readings and class participation are essential components of the course. An in-class oral presentation on a topic related to the student's fieldwork experience is required. An extended journal entry on an ethical issue is required. The paper will not satisfy the writing requirement. Student work is graded on a H/P/LP/F basis."
   },
   {
    "id": "2027SP-2333-1",
