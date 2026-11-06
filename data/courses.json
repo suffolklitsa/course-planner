@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-05",
+ "generated_at": "2026-11-06",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-05"
+   "fetched_at": "2026-11-06"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-05"
+   "fetched_at": "2026-11-06"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-05"
+   "fetched_at": "2026-11-06"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-05"
+   "fetched_at": "2026-11-06"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-05"
+   "fetched_at": "2026-11-06"
   }
  ],
  "terms": [
@@ -15281,6 +15281,43 @@
    "description": "This course provides a broad introduction to the theory, history, doctrine, and practical implementation of land use regulations. It begins by discussing why and when government regulation, rather than private market ordering, might be necessary to control land use patterns. It then explores in detail specific topics, including, but not limited to, zoning, homeowners' associations, nuisance, suburban sprawl, exactions, eminent domain and regulatory takings. The course examines the rights that an owner of land has if a particular land use regulation is inefficient, unfairly burdensome, unfairly disruptive of the owner's settled expectations, or an infringement upon the owner's civil liberties. It also considers land use issues from the other side, examining the rights of those, frequently neighbors, who oppose the landowner's plans (these project opponents are often neighbors). Readings will be drawn from the leading cases in the field, relevant legislative and administrative materials, as well as commentary by scholars in the fields of law, architecture, and planning."
   },
   {
+   "id": "2027SP-2313-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2313",
+   "section": "2313-1",
+   "title": "Landlord and Tenant Law: Residential",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Thu",
+     "start": "18:00",
+     "end": "19:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Neil Sherring"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": true,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [],
+   "concentrations": [],
+   "tags": [
+    "Law - Perspective Courses (Law)"
+   ],
+   "description": "This is a one semester Experiential course offered for 2 credits combining substantive law surrounding the relationship between residential landlords and tenants with practical applications including a wide range of lawyering skills such as how to prepare for and conduct an initial client meeting, client communications, court hearings, ethical issues, research and investigations, strategic counseling, and courtroom performance. Students will examine strategic approaches to: (a) terminating tenancies; (b) eviction bench trials with defenses and counterclaims including discrimination, retaliation, breach of warranty, breach of contract and violations of the Massachusetts Consumer Protection Law (Chapter 93A), (c) injunctions seeking to void the tenancy based upon criminal conduct, and (d) temporary restraining orders seeking to compel landlords to remedy health code violations or stop a move out. This class will provide students with the practical skills needed for engaging in mediation and alternative dispute resolution, preparing for an eviction bench trial, evidentiary hearings and motions. We will examine the development of Housing Law during the current pandemic and legislative moratorium on certain evictions, virtual hearings/trials, access to justice, pro se litigants, reasonable accommodations and federally subsidized housing."
+  },
+  {
    "id": "2027SP-2752-1",
    "term": "Spring 2027",
    "term_code": "2027SP",
@@ -19840,6 +19877,67 @@
      "day": "Thu",
      "start": "18:00",
      "end": "19:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Serge Georges"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": true,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Personal Injury",
+     "level": "core"
+    },
+    {
+     "name": "Labor and Employment",
+     "level": "recommended"
+    },
+    {
+     "name": "Juvenile and Family",
+     "level": "recommended"
+    },
+    {
+     "name": "Criminal",
+     "level": "recommended"
+    },
+    {
+     "name": "Civil Litigation",
+     "level": "core"
+    }
+   ],
+   "concentrations": [
+    "Trial and Appellate Advocacy"
+   ],
+   "tags": [
+    "Law - Civil Litigation Requirement",
+    "Law Areas of Focus - Areas of Focus Core Juvenile and Family Law"
+   ],
+   "description": "The focus is on having each student participate in various phases of a trial. Students will be asked to select a jury, make an opening statement, conduct a direct cross-examination, examine an expert, and give a closing statement. Classes consist of short lectures on each topic followed by student participation based on fact situations in Mauet & Wolfish, Materials in Trial Advocacy. Students are required to read about each phase of a trial in Mauet, Trial Techniques, 5th Edition. Evidence is helpful but not a prerequisite. There is no paper. Grades are based upon evaluation of students as they conduct phases of a trial. Because of the heavy emphasis on student participation, enrollment is limited. \"Please note, enrollment in this course precludes registration for LAW 2363 Trial Advocacy Intensive.\""
+  },
+  {
+   "id": "2027SP-2009-7",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2009",
+   "section": "2009-7",
+   "title": "Trial Advocacy",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Day",
+   "meetings": [
+    {
+     "day": "Thu",
+     "start": "16:00",
+     "end": "17:50"
     }
    ],
    "start_date": "2027-01-19",
