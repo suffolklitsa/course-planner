@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-06",
+ "generated_at": "2026-11-09",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
-   "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-06"
+   "verified_at": "2026-11-09",
+   "fetched_at": "2026-11-09"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
-   "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-06"
+   "verified_at": "2026-11-09",
+   "fetched_at": "2026-11-09"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
-   "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-06"
+   "verified_at": "2026-11-09",
+   "fetched_at": "2026-11-09"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
-   "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-06"
+   "verified_at": "2026-11-09",
+   "fetched_at": "2026-11-09"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
-   "verified_at": "2026-11-02",
-   "fetched_at": "2026-11-06"
+   "verified_at": "2026-11-09",
+   "fetched_at": "2026-11-09"
   }
  ],
  "terms": [
@@ -19444,9 +19444,7 @@
    ],
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
-   "instructors": [
-    "Nicole Pardo"
-   ],
+   "instructors": [],
    "prerequisites": "Law 151 or LAW 452",
    "requirements": {
     "experiential": true,
@@ -19476,6 +19474,42 @@
     "Law - Intellectual Property Concentration Requirements."
    ],
    "description": "Transactional lawyers need to be able to apply their substantive knowledge and expertise to the real-world transactional deals of their clients. This course is intended to help students prepare for the practice of law by providing foundational skills for commercial and transactional law practice. Students will learn about the role of transactional lawyers, while focusing on the basic skills of translating the business deal into contract concepts, drafting commercial agreements, and analyzing contract terms. Most lawyers will need to work with contracts during their careers and, therefore, this course holds interest for all students and not just those interested in corporate or transactional practice. The course will use using a variety of contract problems because not every contract is of interest to all. Topics to be addressed include: - Role of transactional lawyer and ethics - The context of the contract and deal timeline - The deal lawyer's analytical skill: determining which contract concept best expresses the business deal - Basic techniques for drafting terms - Layout of a contract - How to avoid ambiguity and unintentional vagueness - plain English - Boilerplate - Use of technology in contracts Students are expected to come to class prepared, participate, and satisfactorily complete all assignments by the deadlines. Course grades will be based on the following: - Class participation - 30% - Non-graded assignments and exercises - 20% - Graded assignments - 50%"
+  },
+  {
+   "id": "2027SP-8023-1",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "8023",
+   "section": "8023-1",
+   "title": "Transactional Skills: Health Law",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Thu",
+     "start": "18:00",
+     "end": "19:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": false,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [],
+   "concentrations": [
+    "Business Law and Financial Services",
+    "Health and Biomedical"
+   ],
+   "tags": [],
+   "description": "This course centers on health care transactional law and the drivers of the ongoing consolidation and restructuring taking place throughout the health care delivery system as well as emerging market opportunities in Massachusetts and throughout the country. Transactions and new entity/relationship formation are the focus of the course, including the health law issues related to structuring and financing of affiliations among and acquisition of hospitals and other providers; the formation of integrated delivery systems and joint ventures; and other forms of health care transactions including professional practice start-up formation. The legal issues to be considered in this context include: transaction organization, antitrust, fraud and abuse, state and federal regulation of charitable/non-profit health care organizations, and health care regulation of transactions including licensure, certificates of need and corporate practice of medicine.  In addition, the course will discuss the mechanics of closing a transaction including due diligence and closing requirements. Prerequisite (Recommended But Not Required):  Health Law"
   },
   {
    "id": "2027SP-2736-1",
@@ -19513,7 +19547,9 @@
      "level": "recommended"
     }
    ],
-   "concentrations": [],
+   "concentrations": [
+    "Business Law and Financial Services"
+   ],
    "tags": [],
    "description": "Ever wonder how an innovative new invention makes it to market? How a book gets transformed into a film and a film gets transformed into merchandise? How a celebrity makes money from an endorsement? This is where contract meets IP and intellectual property assets become valuable. The course will cover the drafting of and key issues that arise in assignments, licenses and other commercial agreements that facilitate exploitation of IP assets. Grading will be based on short exercises throughout the semester, such as written drafting problems, in-class negotiation simulations, and a group project analyzing a deal."
   },
@@ -19553,7 +19589,9 @@
      "level": "recommended"
     }
    ],
-   "concentrations": [],
+   "concentrations": [
+    "Business Law and Financial Services"
+   ],
    "tags": [],
    "description": "Ever wonder how an innovative new invention makes it to market? How a book gets transformed into a film and a film gets transformed into merchandise? How a celebrity makes money from an endorsement? This is where contract meets IP and intellectual property assets become valuable. The course will cover the drafting of and key issues that arise in assignments, licenses and other commercial agreements that facilitate exploitation of IP assets. Grading will be based on short exercises throughout the semester, such as written drafting problems, in-class negotiation simulations, and a group project analyzing a deal."
   },
