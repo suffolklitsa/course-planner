@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-09",
+ "generated_at": "2026-11-10",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
    "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-09"
+   "fetched_at": "2026-11-10"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
    "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-09"
+   "fetched_at": "2026-11-10"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
    "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-09"
+   "fetched_at": "2026-11-10"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
    "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-09"
+   "fetched_at": "2026-11-10"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
    "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-09"
+   "fetched_at": "2026-11-10"
   }
  ],
  "terms": [
@@ -14977,6 +14977,62 @@
    "end_date": "2027-05-14",
    "instructors": [
     "Richard Pizzano"
+   ],
+   "prerequisites": "",
+   "requirements": {
+    "experiential": true,
+    "writing": false,
+    "ma_bar": false,
+    "first_year": false,
+    "clinic_or_internship": false
+   },
+   "areas_of_focus": [
+    {
+     "name": "Public Service",
+     "level": "recommended"
+    },
+    {
+     "name": "Labor and Employment",
+     "level": "recommended"
+    },
+    {
+     "name": "Dispute Resolution",
+     "level": "recommended"
+    },
+    {
+     "name": "Juvenile and Family",
+     "level": "recommended"
+    },
+    {
+     "name": "Civil Litigation",
+     "level": "recommended"
+    }
+   ],
+   "concentrations": [],
+   "tags": [],
+   "description": "This course is designed to raise the student's level of awareness of the interaction between the lawyer and client and train the student in the preventive law and counseling functions of law practice. Among topics included are: the initial interview active and passive listening, the reluctant client, decision making, lawyer and client, who's in charge, and selected ethical considerations. Techniques will include extensive role-playing by each student, student observation, and critique by the students and the instructor."
+  },
+  {
+   "id": "2027SP-2225-3",
+   "term": "Spring 2027",
+   "term_code": "2027SP",
+   "course_number": "2225",
+   "section": "2225-3",
+   "title": "Interviewing and Counseling",
+   "credits": 2.0,
+   "delivery": "In-Person",
+   "division": "Evening",
+   "meetings": [
+    {
+     "day": "Thu",
+     "start": "18:00",
+     "end": "19:50"
+    }
+   ],
+   "start_date": "2027-01-19",
+   "end_date": "2027-05-14",
+   "instructors": [
+    "Cara Libman"
    ],
    "prerequisites": "",
    "requirements": {
