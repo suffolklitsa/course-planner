@@ -1,36 +1,36 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-12",
+ "generated_at": "2026-11-16",
  "sources": [
   {
    "id": "law-course-offerings-2026-27",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/law-course-offerings",
-   "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-12"
+   "verified_at": "2026-11-16",
+   "fetched_at": "2026-11-16"
   },
   {
    "id": "law-fall-day-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-day-block-schedule",
-   "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-12"
+   "verified_at": "2026-11-16",
+   "fetched_at": "2026-11-16"
   },
   {
    "id": "law-fall-evening-block-schedule-2026",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/fall-evening-block-schedule",
-   "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-12"
+   "verified_at": "2026-11-16",
+   "fetched_at": "2026-11-16"
   },
   {
    "id": "law-spring-day-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-day-block-schedule",
-   "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-12"
+   "verified_at": "2026-11-16",
+   "fetched_at": "2026-11-16"
   },
   {
    "id": "law-spring-evening-block-schedule-2027",
    "url": "https://www.suffolk.edu/law/academics-clinics/academic-resources/course-registration/spring-evening-block-schedule",
-   "verified_at": "2026-11-09",
-   "fetched_at": "2026-11-12"
+   "verified_at": "2026-11-16",
+   "fetched_at": "2026-11-16"
   }
  ],
  "terms": [
@@ -19250,7 +19250,7 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Elbert Robertson"
+    "Linh Dai"
    ],
    "prerequisites": "Student is Law Section C Cohort",
    "requirements": {
@@ -19380,7 +19380,7 @@
    "start_date": "2027-01-19",
    "end_date": "2027-05-14",
    "instructors": [
-    "Linh Dai"
+    "Elbert Robertson"
    ],
    "prerequisites": "Student is Law Section 4A Cohort",
    "requirements": {
@@ -19540,7 +19540,7 @@
    "term_code": "2027SP",
    "course_number": "8023",
    "section": "8023-1",
-   "title": "Transactional Skills: Health Law",
+   "title": "Transactional Skills: Health Care",
    "credits": 2.0,
    "delivery": "In-Person",
    "division": "Evening",
@@ -19556,7 +19556,7 @@
    "instructors": [],
    "prerequisites": "",
    "requirements": {
-    "experiential": false,
+    "experiential": true,
     "writing": false,
     "ma_bar": false,
     "first_year": false,
